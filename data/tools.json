@@ -1,0 +1,1048 @@
+[
+  {
+    "id": "nmap",
+    "name": "Nmap",
+    "aliases": ["Network Mapper"],
+    "category": "Networking.Inventory",
+    "wingetId": "Insecure.Nmap",
+    "kali": "https://www.kali.org/tools/nmap/",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/i/Insecure/Nmap/7.80/Insecure.Nmap.yaml",
+    "publisherDownload": "https://nmap.org/download.html#windows",
+    "description": {
+      "en": "Inventory hosts and services on authorized networks. WinGet lists 7.80. The publisher offers newer Windows builds.",
+      "es": "Identifica equipos y servicios en redes autorizadas. WinGet ofrece la versión 7.80. El proyecto publica versiones más recientes para Windows."
+    }
+  },
+  {
+    "id": "angry-ip-scanner",
+    "name": "Angry IP Scanner",
+    "category": "Networking.Inventory",
+    "wingetId": "angryziber.AngryIPScanner",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/a/angryziber/AngryIPScanner/3.12.2/angryziber.AngryIPScanner.yaml",
+    "description": {
+      "en": "Inventory devices and record basic host information on a network you manage.",
+      "es": "Crea un inventario de dispositivos y registra información básica de equipos en una red que administras."
+    }
+  },
+  {
+    "id": "advanced-ip-scanner",
+    "name": "Advanced IP Scanner",
+    "category": "Networking.Inventory",
+    "wingetId": "Famatech.AdvancedIPScanner",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/f/Famatech/AdvancedIPScanner/2.5.4594.1/Famatech.AdvancedIPScanner.yaml",
+    "description": {
+      "en": "List devices and shared resources on a local Windows network.",
+      "es": "Enumera dispositivos y recursos compartidos de una red local de Windows."
+    }
+  },
+  {
+    "id": "softperfect-network-scanner",
+    "name": "SoftPerfect Network Scanner",
+    "category": "Networking.Inventory",
+    "wingetId": "SoftPerfect.NetworkScanner",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/s/SoftPerfect/NetworkScanner/26.9/SoftPerfect.NetworkScanner.yaml",
+    "description": {
+      "en": "Collect device and service inventories across managed network segments.",
+      "es": "Recopila inventarios de dispositivos y servicios en segmentos de red administrados."
+    }
+  },
+  {
+    "id": "wireless-network-watcher",
+    "name": "Wireless Network Watcher",
+    "category": "Networking.Inventory",
+    "wingetId": "NirSoft.WirelessNetworkWatcher",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/n/NirSoft/WirelessNetworkWatcher/2.45/NirSoft.WirelessNetworkWatcher.yaml",
+    "description": {
+      "en": "List devices connected to your local network and view their addresses.",
+      "es": "Enumera los dispositivos conectados a tu red local y muestra sus direcciones."
+    }
+  },
+  {
+    "id": "wireshark",
+    "name": "Wireshark",
+    "aliases": ["tshark","packet capture","analizador de tráfico"],
+    "category": "Networking.Traffic",
+    "wingetId": "WiresharkFoundation.Wireshark",
+    "kali": "https://www.kali.org/tools/wireshark/",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/w/WiresharkFoundation/Wireshark/4.6.10/WiresharkFoundation.Wireshark.yaml",
+    "description": {
+      "en": "Inspect network captures for troubleshooting and traffic analysis.",
+      "es": "Examina capturas de red para diagnosticar problemas y analizar tráfico."
+    }
+  },
+  {
+    "id": "tcpview",
+    "name": "TCPView",
+    "category": "Networking.Traffic",
+    "wingetId": "Microsoft.Sysinternals.TCPView",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/m/Microsoft/Sysinternals/TCPView/4.19/Microsoft.Sysinternals.TCPView.yaml",
+    "description": {
+      "en": "Match live TCP connections and UDP endpoints to their Windows processes.",
+      "es": "Relaciona conexiones TCP activas y puertos UDP con sus procesos en Windows."
+    }
+  },
+  {
+    "id": "etl2pcapng",
+    "name": "etl2pcapng",
+    "category": "Networking.Traffic",
+    "wingetId": "Microsoft.etl2pcapng",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/m/Microsoft/etl2pcapng/1.11.0/Microsoft.etl2pcapng.yaml",
+    "description": {
+      "en": "Convert supported Windows ETL packet traces to PCAPNG for offline review.",
+      "es": "Convierte trazas de paquetes ETL compatibles de Windows a PCAPNG para revisarlas sin conexión."
+    }
+  },
+  {
+    "id": "doggo",
+    "name": "Doggo",
+    "category": "Networking.Dns",
+    "wingetId": "MrKaran.Doggo",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/m/MrKaran/Doggo/1.4.2/MrKaran.Doggo.yaml",
+    "description": {
+      "en": "Query DNS records and compare responses from different resolvers.",
+      "es": "Consulta registros DNS y compara las respuestas de distintos resolutores."
+    }
+  },
+  {
+    "id": "ipnetinfo",
+    "name": "IPNetInfo",
+    "category": "Networking.Dns",
+    "wingetId": "NirSoft.IPNetInfo",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/n/NirSoft/IPNetInfo/1.95/NirSoft.IPNetInfo.yaml",
+    "description": {
+      "en": "Look up public IP address registration and network ownership records.",
+      "es": "Consulta registros públicos de direcciones IP y titularidad de redes."
+    }
+  },
+  {
+    "id": "whoisthisdomain",
+    "name": "WhoisThisDomain",
+    "category": "Networking.Dns",
+    "wingetId": "NirSoft.WhoisThisDomain",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/n/NirSoft/WhoisThisDomain/2.46/NirSoft.WhoisThisDomain.yaml",
+    "description": {
+      "en": "Look up public domain registration records from WHOIS services.",
+      "es": "Consulta registros públicos de dominios en servicios WHOIS."
+    }
+  },
+  {
+    "id": "iperf3",
+    "name": "iPerf3",
+    "category": "Networking.Performance",
+    "wingetId": "ar51an.iPerf3",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/a/ar51an/iPerf3/3.22.1/ar51an.iPerf3.yaml",
+    "description": {
+      "en": "Measure bandwidth, loss and jitter between endpoints you control.",
+      "es": "Mide ancho de banda, pérdida y variación del retardo entre equipos que controlas."
+    }
+  },
+  {
+    "id": "zaproxy",
+    "name": "ZAP (OWASP ZAP)",
+    "aliases": ["OWASP","OWASP Zed Attack Proxy","Zed Attack Proxy"],
+    "category": "Web.Http",
+    "wingetId": "ZAP.ZAP",
+    "kali": "https://www.kali.org/tools/zaproxy/",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/z/ZAP/ZAP/2.17.0/ZAP.ZAP.yaml",
+    "description": {
+      "en": "Inspect HTTP traffic during security reviews of web applications.",
+      "es": "Examina tráfico HTTP durante revisiones de seguridad de aplicaciones web."
+    }
+  },
+  {
+    "id": "http-toolkit",
+    "name": "HTTP Toolkit",
+    "category": "Web.Http",
+    "wingetId": "HTTPToolKit.HTTPToolKit",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/h/HTTPToolKit/HTTPToolKit/1.27.4/HTTPToolKit.HTTPToolKit.yaml",
+    "description": {
+      "en": "Inspect HTTP requests and responses from applications you control.",
+      "es": "Examina solicitudes y respuestas HTTP de aplicaciones que controlas."
+    }
+  },
+  {
+    "id": "fiddler-classic",
+    "name": "Fiddler Classic",
+    "category": "Web.Http",
+    "wingetId": "Telerik.Fiddler.Classic",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/t/Telerik/Fiddler/Classic/6.0.20262.10021/Telerik.Fiddler.Classic.yaml",
+    "description": {
+      "en": "Capture and review HTTP sessions for Windows application debugging.",
+      "es": "Captura y revisa sesiones HTTP para depurar aplicaciones de Windows."
+    }
+  },
+  {
+    "id": "mitmproxy",
+    "name": "mitmproxy",
+    "category": "Web.Http",
+    "wingetId": "mitmproxy.mitmproxy",
+    "kali": "https://www.kali.org/tools/mitmproxy/",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/m/mitmproxy/mitmproxy/12.3.1/mitmproxy.mitmproxy.yaml",
+    "description": {
+      "en": "Inspect authorized HTTP traffic in a terminal and review saved sessions.",
+      "es": "Inspecciona tráfico HTTP autorizado desde el terminal y revisa sesiones guardadas."
+    }
+  },
+  {
+    "id": "burp-suite-community",
+    "name": "Burp Suite Community Edition",
+    "category": "Web.Http",
+    "wingetId": "PortSwigger.BurpSuite.Community",
+    "kali": "https://www.kali.org/tools/burpsuite/",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/p/PortSwigger/BurpSuite/Community/2026.3.3/PortSwigger.BurpSuite.Community.yaml",
+    "description": {
+      "en": "Inspect and review HTTP messages during manual web application assessments.",
+      "es": "Inspecciona y revisa mensajes HTTP durante evaluaciones manuales de aplicaciones web."
+    }
+  },
+  {
+    "id": "wfuzz",
+    "name": "wfuzz",
+    "category": "Web.Testing",
+    "wingetId": null,
+    "publisherDownload": "https://pypi.org/project/wfuzz/3.1.0/",
+    "kali": "https://www.kali.org/tools/wfuzz/",
+    "manifest": null,
+    "description": {
+      "en": "Web request testing utility. Version 3.1.0 starts on isolated Python 3.11 on Windows with legacy dependencies. Use the publisher source.",
+      "es": "Utilidad para probar solicitudes web. La versión 3.1.0 arranca en Python 3.11 aislado en Windows con dependencias antiguas. Consulta la fuente del proyecto."
+    }
+  },
+  {
+    "id": "curl",
+    "name": "curl",
+    "category": "Web.Api",
+    "wingetId": "cURL.cURL",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/c/cURL/cURL/8.23.0.9/cURL.cURL.yaml",
+    "description": {
+      "en": "Send HTTP requests and inspect response headers from the command line.",
+      "es": "Envía solicitudes HTTP y examina cabeceras de respuesta desde la línea de comandos."
+    }
+  },
+  {
+    "id": "httpie",
+    "name": "HTTPie Desktop",
+    "category": "Web.Api",
+    "wingetId": "HTTPie.HTTPie",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/h/HTTPie/HTTPie/2025.2.0/HTTPie.HTTPie.yaml",
+    "description": {
+      "en": "Compose API requests and inspect formatted responses in a desktop client.",
+      "es": "Redacta solicitudes de API y examina respuestas con formato en un cliente de escritorio."
+    }
+  },
+  {
+    "id": "postman",
+    "name": "Postman",
+    "category": "Web.Api",
+    "wingetId": "Postman.Postman",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/p/Postman/Postman/12.38.1/Postman.Postman.yaml",
+    "description": {
+      "en": "Organize API requests in collections and check expected responses.",
+      "es": "Organiza solicitudes de API en colecciones y comprueba las respuestas esperadas."
+    }
+  },
+  {
+    "id": "insomnia",
+    "name": "Insomnia",
+    "category": "Web.Api",
+    "wingetId": "Insomnia.Insomnia",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/i/Insomnia/Insomnia/13.4.0/Insomnia.Insomnia.yaml",
+    "description": {
+      "en": "Build and review REST, GraphQL and gRPC requests in a desktop workspace.",
+      "es": "Prepara y revisa solicitudes REST, GraphQL y gRPC en un entorno de escritorio."
+    }
+  },
+  {
+    "id": "bruno",
+    "name": "Bruno",
+    "category": "Web.Api",
+    "wingetId": "Bruno.Bruno",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/b/Bruno/Bruno/4.3.0/Bruno.Bruno.yaml",
+    "description": {
+      "en": "Organize API requests in local collections that can be versioned with Git.",
+      "es": "Organiza solicitudes de API en colecciones locales que puedes versionar con Git."
+    }
+  },
+  {
+    "id": "openssl",
+    "name": "OpenSSL Light",
+    "category": "Web.Tls",
+    "wingetId": "ShiningLight.OpenSSL.Light",
+    "kali": "https://www.kali.org/tools/openssl/",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/s/ShiningLight/OpenSSL/Light/4.1.0/ShiningLight.OpenSSL.Light.yaml",
+    "description": {
+      "en": "Inspect certificates, keys and TLS connections during configuration reviews.",
+      "es": "Examina certificados, claves y conexiones TLS durante revisiones de configuración."
+    }
+  },
+  {
+    "id": "step-cli",
+    "name": "Smallstep CLI",
+    "category": "Web.Tls",
+    "wingetId": "Smallstep.step",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/s/Smallstep/step/0.31.0/Smallstep.step.yaml",
+    "description": {
+      "en": "Inspect and validate X.509 certificates and certificate chains.",
+      "es": "Examina y valida certificados X.509 y cadenas de certificación."
+    }
+  },
+  {
+    "id": "exiftool",
+    "name": "ExifTool",
+    "category": "Forensics.Metadata",
+    "wingetId": "OliverBetz.ExifTool",
+    "kali": "https://www.kali.org/tools/libimage-exiftool-perl/",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/o/OliverBetz/ExifTool/13.64/OliverBetz.ExifTool.yaml",
+    "description": {
+      "en": "Examine metadata in images, documents and other files.",
+      "es": "Examina metadatos de imágenes, documentos y otros archivos."
+    }
+  },
+  {
+    "id": "autopsy",
+    "name": "Autopsy",
+    "category": "Forensics.Disk",
+    "wingetId": "SleuthKit.Autopsy",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/s/SleuthKit/Autopsy/4.23.1/SleuthKit.Autopsy.yaml",
+    "description": {
+      "en": "Review forensic disk images and correlate files, metadata and timelines.",
+      "es": "Revisa imágenes forenses de disco y correlaciona archivos, metadatos y cronologías."
+    }
+  },
+  {
+    "id": "volatility-workbench",
+    "name": "Volatility Workbench",
+    "category": "Forensics.Memory",
+    "wingetId": "PassMark.VolatilityWorkbench",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/p/PassMark/VolatilityWorkbench/3.0.1014/PassMark.VolatilityWorkbench.yaml",
+    "description": {
+      "en": "Read memory captures and examine artifacts through a Volatility graphical interface.",
+      "es": "Lee capturas de memoria y examina artefactos mediante una interfaz gráfica de Volatility."
+    }
+  },
+  {
+    "id": "full-event-log-view",
+    "name": "FullEventLogView",
+    "category": "Forensics.Events",
+    "wingetId": "NirSoft.FullEventLogView",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/n/NirSoft/FullEventLogView/1.81/NirSoft.FullEventLogView.yaml",
+    "description": {
+      "en": "Review Windows events from local logs and saved EVTX files.",
+      "es": "Revisa eventos de Windows en registros locales y archivos EVTX guardados."
+    }
+  },
+  {
+    "id": "last-activity-view",
+    "name": "LastActivityView",
+    "category": "Forensics.Events",
+    "wingetId": "NirSoft.LastActivityView",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/n/NirSoft/LastActivityView/1.37/NirSoft.LastActivityView.yaml",
+    "description": {
+      "en": "Build a local activity timeline from artifacts recorded by Windows.",
+      "es": "Construye una cronología de actividad local a partir de artefactos registrados por Windows."
+    }
+  },
+  {
+    "id": "hash-my-files",
+    "name": "HashMyFiles",
+    "category": "Forensics.Integrity",
+    "wingetId": "NirSoft.HashMyFiles",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/n/NirSoft/HashMyFiles/2.52/NirSoft.HashMyFiles.yaml",
+    "description": {
+      "en": "Calculate file hashes for comparison and evidence integrity checks.",
+      "es": "Calcula hashes de archivos para compararlos y comprobar la integridad de evidencias."
+    }
+  },
+  {
+    "id": "gpg4win",
+    "name": "Gpg4win",
+    "category": "Forensics.Integrity",
+    "wingetId": "GnuPG.Gpg4win",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/g/GnuPG/Gpg4win/5.1.2/GnuPG.Gpg4win.yaml",
+    "description": {
+      "en": "Verify OpenPGP signatures and manage keys on Windows.",
+      "es": "Verifica firmas OpenPGP y administra claves en Windows."
+    }
+  },
+  {
+    "id": "hxd",
+    "name": "HxD",
+    "category": "Forensics.Binary",
+    "wingetId": "MHNexus.HxD",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/m/MHNexus/HxD/2.5/MHNexus.HxD.yaml",
+    "description": {
+      "en": "Inspect raw bytes and compare offsets in binary files.",
+      "es": "Examina bytes sin procesar y compara desplazamientos en archivos binarios."
+    }
+  },
+  {
+    "id": "imhex",
+    "name": "ImHex",
+    "category": "Forensics.Binary",
+    "wingetId": "WerWolv.ImHex",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/w/WerWolv/ImHex/1.38.1/WerWolv.ImHex.yaml",
+    "description": {
+      "en": "Inspect binary structures with a hex editor and reusable patterns.",
+      "es": "Examina estructuras binarias con un editor hexadecimal y patrones reutilizables."
+    }
+  },
+  {
+    "id": "detect-it-easy",
+    "name": "Detect It Easy",
+    "category": "ReverseEngineering.Identification",
+    "aliases": ["DiE","DIE-engine","DetectItEasy"],
+    "wingetId": "horsicq.DIE-engine",
+    "publisherDownload": "https://github.com/horsicq/DIE-engine/releases",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/h/horsicq/DIE-engine/4.0.0/horsicq.DIE-engine.yaml",
+    "description": {
+      "en": "Identify executable file formats, compilers and packers.",
+      "es": "Identifica formatos de ejecutables, compiladores y empaquetadores."
+    }
+  },
+  {
+    "id": "pe-bear",
+    "name": "PE-bear",
+    "category": "ReverseEngineering.Identification",
+    "aliases": ["PEBear","PE viewer"],
+    "wingetId": "hasherezade.PE-bear",
+    "publisherDownload": "https://github.com/hasherezade/pe-bear/releases",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/h/hasherezade/PE-bear/0.7.2/hasherezade.PE-bear.yaml",
+    "description": {
+      "en": "Inspect headers, imports and sections in Windows PE files.",
+      "es": "Examina cabeceras, importaciones y secciones de archivos PE de Windows."
+    }
+  },
+  {
+    "id": "cutter",
+    "name": "Cutter",
+    "category": "ReverseEngineering.Native",
+    "aliases": ["Cutter RE","Rizin GUI"],
+    "wingetId": "Rizin.Cutter",
+    "publisherDownload": "https://github.com/rizinorg/cutter/releases",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/r/Rizin/Cutter/2.5.0/Rizin.Cutter.yaml",
+    "description": {
+      "en": "Review native binaries by examining instructions, symbols and control flow.",
+      "es": "Revisa binarios nativos examinando instrucciones, símbolos y flujo de control."
+    }
+  },
+  {
+    "id": "ilspy",
+    "name": "ILSpy",
+    "category": "ReverseEngineering.DotNet",
+    "aliases": ["IL Spy","dotnet","C# decompiler"],
+    "wingetId": "icsharpcode.ILSpy",
+    "publisherDownload": "https://github.com/icsharpcode/ILSpy/releases",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/i/icsharpcode/ILSpy/11.2.0.10050/icsharpcode.ILSpy.yaml",
+    "description": {
+      "en": "Inspect .NET assemblies, decompiled code and metadata.",
+      "es": "Examina ensamblados .NET, código descompilado y metadatos."
+    }
+  },
+  {
+    "id": "dnspyex",
+    "name": "dnSpyEx",
+    "category": "ReverseEngineering.DotNet",
+    "aliases": ["dnSpy","dnSpyEx","dotnet","C# decompiler"],
+    "wingetId": "dnSpyEx.dnSpy",
+    "publisherDownload": "https://github.com/dnSpyEx/dnSpy/releases",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/d/dnSpyEx/dnSpy/6.6.0/dnSpyEx.dnSpy.yaml",
+    "description": {
+      "en": "Inspect .NET assemblies and debug managed applications you are analyzing.",
+      "es": "Examina ensamblados .NET y depura las aplicaciones administradas que estés analizando."
+    }
+  },
+  {
+    "id": "strings",
+    "name": "Strings",
+    "category": "Forensics.Binary",
+    "wingetId": "Microsoft.Sysinternals.Strings",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/m/Microsoft/Sysinternals/Strings/2.54/Microsoft.Sysinternals.Strings.yaml",
+    "description": {
+      "en": "Extract readable ASCII and Unicode text from binary files.",
+      "es": "Extrae texto ASCII y Unicode legible de archivos binarios."
+    }
+  },
+  {
+    "id": "yara",
+    "name": "YARA",
+    "category": "Forensics.Triage",
+    "wingetId": "VirusTotal.YARA",
+    "kali": "https://www.kali.org/tools/yara/",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/v/VirusTotal/YARA/4.6.0/VirusTotal.YARA.yaml",
+    "description": {
+      "en": "Classify files by matching patterns during defensive triage.",
+      "es": "Clasifica archivos mediante patrones durante el triaje defensivo."
+    }
+  },
+  {
+    "id": "yara-x",
+    "name": "YARA-X",
+    "category": "Forensics.Triage",
+    "wingetId": "VirusTotal.YARA-X",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/v/VirusTotal/YARA-X/1.24.0/VirusTotal.YARA-X.yaml",
+    "description": {
+      "en": "Match YARA rules with a newer engine when reviewing files and artifacts.",
+      "es": "Aplica reglas YARA con un motor más reciente al revisar archivos y artefactos."
+    }
+  },
+  {
+    "id": "process-explorer",
+    "name": "Process Explorer",
+    "category": "Endpoint.Processes",
+    "wingetId": "Microsoft.Sysinternals.ProcessExplorer",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/m/Microsoft/Sysinternals/ProcessExplorer/17.21/Microsoft.Sysinternals.ProcessExplorer.yaml",
+    "description": {
+      "en": "Inspect Windows process trees, loaded modules and open handles.",
+      "es": "Examina árboles de procesos, módulos cargados y descriptores abiertos de Windows."
+    }
+  },
+  {
+    "id": "process-monitor",
+    "name": "Process Monitor",
+    "category": "Endpoint.Processes",
+    "wingetId": "Microsoft.Sysinternals.ProcessMonitor",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/m/Microsoft/Sysinternals/ProcessMonitor/4.13/Microsoft.Sysinternals.ProcessMonitor.yaml",
+    "description": {
+      "en": "Trace local Windows file, registry and process activity.",
+      "es": "Registra actividad local de archivos, registro y procesos de Windows."
+    }
+  },
+  {
+    "id": "system-informer",
+    "name": "System Informer",
+    "category": "Endpoint.Processes",
+    "wingetId": "WinsiderSS.SystemInformer",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/w/WinsiderSS/SystemInformer/4.0.26241.138/WinsiderSS.SystemInformer.yaml",
+    "description": {
+      "en": "Inspect running processes, threads, services and system resource use.",
+      "es": "Examina procesos, hilos, servicios y el uso de recursos del sistema."
+    }
+  },
+  {
+    "id": "handle",
+    "name": "Handle",
+    "category": "Endpoint.Processes",
+    "wingetId": "Microsoft.Sysinternals.Handle",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/m/Microsoft/Sysinternals/Handle/5.0/Microsoft.Sysinternals.Handle.yaml",
+    "description": {
+      "en": "Find which processes hold references to files and other Windows objects.",
+      "es": "Localiza qué procesos mantienen referencias a archivos y otros objetos de Windows."
+    }
+  },
+  {
+    "id": "opened-files-view",
+    "name": "OpenedFilesView",
+    "category": "Endpoint.Processes",
+    "wingetId": "NirSoft.OpenedFilesView",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/n/NirSoft/OpenedFilesView/1.91/NirSoft.OpenedFilesView.yaml",
+    "description": {
+      "en": "See which local processes have files open.",
+      "es": "Consulta qué procesos locales mantienen archivos abiertos."
+    }
+  },
+  {
+    "id": "rammap",
+    "name": "RAMMap",
+    "category": "Endpoint.Memory",
+    "wingetId": "Microsoft.Sysinternals.RAMMap",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/m/Microsoft/Sysinternals/RAMMap/1.63/Microsoft.Sysinternals.RAMMap.yaml",
+    "description": {
+      "en": "Review how Windows assigns physical memory to caches, drivers and processes.",
+      "es": "Revisa cómo Windows asigna memoria física a cachés, controladores y procesos."
+    }
+  },
+  {
+    "id": "vmmap",
+    "name": "VMMap",
+    "category": "Endpoint.Memory",
+    "wingetId": "Microsoft.Sysinternals.VMMap",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/m/Microsoft/Sysinternals/VMMap/3.4/Microsoft.Sysinternals.VMMap.yaml",
+    "description": {
+      "en": "Break down a process by virtual memory region and allocation type.",
+      "es": "Desglosa un proceso por región de memoria virtual y tipo de asignación."
+    }
+  },
+  {
+    "id": "windbg",
+    "name": "WinDbg",
+    "category": "Endpoint.Memory",
+    "wingetId": "Microsoft.WinDbg",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/m/Microsoft/WinDbg/1.2611.4001.0/Microsoft.WinDbg.yaml",
+    "description": {
+      "en": "Inspect Windows crash dumps, stack traces and process memory.",
+      "es": "Examina volcados de errores, trazas de pila y memoria de procesos de Windows."
+    }
+  },
+  {
+    "id": "autoruns",
+    "name": "Autoruns",
+    "category": "Endpoint.Startup",
+    "wingetId": "Microsoft.Sysinternals.Autoruns",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/m/Microsoft/Sysinternals/Autoruns/14.3/Microsoft.Sysinternals.Autoruns.yaml",
+    "description": {
+      "en": "Audit the programs, services and extensions configured to start automatically.",
+      "es": "Audita programas, servicios y extensiones configurados para iniciarse automáticamente."
+    }
+  },
+  {
+    "id": "sigcheck",
+    "name": "Sigcheck",
+    "category": "Endpoint.Startup",
+    "wingetId": "Microsoft.Sysinternals.Sigcheck",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/m/Microsoft/Sysinternals/Sigcheck/2.93/Microsoft.Sysinternals.Sigcheck.yaml",
+    "description": {
+      "en": "Review digital signatures and version information for Windows executables.",
+      "es": "Revisa firmas digitales e información de versiones de ejecutables de Windows."
+    }
+  },
+  {
+    "id": "installed-drivers-list",
+    "name": "InstalledDriversList",
+    "category": "Endpoint.Startup",
+    "wingetId": "NirSoft.InstalledDriversList",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/n/NirSoft/InstalledDriversList/1.06/NirSoft.InstalledDriversList.yaml",
+    "description": {
+      "en": "Review installed Windows driver files, versions and load information.",
+      "es": "Revisa archivos, versiones e información de carga de controladores instalados en Windows."
+    }
+  },
+  {
+    "id": "sysmon",
+    "name": "Sysmon",
+    "category": "Endpoint.Telemetry",
+    "wingetId": "Microsoft.Sysinternals.Sysmon",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/m/Microsoft/Sysinternals/Sysmon/15.22/Microsoft.Sysinternals.Sysmon.yaml",
+    "description": {
+      "en": "Record selected system activity for defensive monitoring in Windows Event Log.",
+      "es": "Registra actividad del sistema para monitorización defensiva en el registro de eventos de Windows."
+    }
+  },
+  {
+    "id": "osquery",
+    "name": "osquery",
+    "category": "Endpoint.Telemetry",
+    "wingetId": "osquery.osquery",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/o/osquery/osquery/5.24.1/osquery.osquery.yaml",
+    "description": {
+      "en": "Query operating system inventory and security settings with SQL.",
+      "es": "Consulta el inventario y la configuración de seguridad del sistema operativo con SQL."
+    }
+  },
+  {
+    "id": "stratoshark",
+    "name": "Stratoshark",
+    "category": "Endpoint.Telemetry",
+    "wingetId": "WiresharkFoundation.Stratoshark",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/w/WiresharkFoundation/Stratoshark/0.10.4/WiresharkFoundation.Stratoshark.yaml",
+    "description": {
+      "en": "Inspect supported system-call captures and log events in a Wireshark-style interface.",
+      "es": "Examina capturas compatibles de llamadas al sistema y eventos de registro en una interfaz similar a Wireshark."
+    }
+  },
+  {
+    "id": "trivy",
+    "name": "Trivy",
+    "category": "Code.Dependencies",
+    "wingetId": "AquaSecurity.Trivy",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/a/AquaSecurity/Trivy/0.76.2/AquaSecurity.Trivy.yaml",
+    "description": {
+      "en": "Audit dependencies, container images and configuration for known security issues.",
+      "es": "Audita dependencias, imágenes de contenedor y configuraciones en busca de problemas de seguridad conocidos."
+    }
+  },
+  {
+    "id": "grype",
+    "name": "Grype",
+    "category": "Code.Dependencies",
+    "wingetId": "Anchore.Grype",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/a/Anchore/Grype/0.122.1/Anchore.Grype.yaml",
+    "description": {
+      "en": "Match installed packages and software inventories against vulnerability advisories.",
+      "es": "Contrasta paquetes instalados e inventarios de software con avisos de vulnerabilidades."
+    }
+  },
+  {
+    "id": "osv-scanner",
+    "name": "OSV-Scanner",
+    "category": "Code.Dependencies",
+    "wingetId": "Google.OSVScanner",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/g/Google/OSVScanner/2.7.0/Google.OSVScanner.yaml",
+    "description": {
+      "en": "Find known vulnerabilities in project dependencies using OSV advisories.",
+      "es": "Identifica vulnerabilidades conocidas en dependencias del proyecto mediante avisos de OSV."
+    }
+  },
+  {
+    "id": "snyk",
+    "name": "Snyk CLI",
+    "category": "Code.Dependencies",
+    "wingetId": "Snyk.Snyk",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/s/Snyk/Snyk/1.1309.0/Snyk.Snyk.yaml",
+    "description": {
+      "en": "Review project dependencies and container images for known issues with Snyk.",
+      "es": "Revisa dependencias de proyectos e imágenes de contenedor en busca de problemas conocidos con Snyk."
+    }
+  },
+  {
+    "id": "syft",
+    "name": "Syft",
+    "category": "Code.SupplyChain",
+    "wingetId": "Anchore.Syft",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/a/Anchore/Syft/1.57.2/Anchore.Syft.yaml",
+    "description": {
+      "en": "Generate a software bill of materials from filesystems and container images.",
+      "es": "Genera un inventario de componentes de software a partir de sistemas de archivos e imágenes de contenedor."
+    }
+  },
+  {
+    "id": "cyclonedx-cli",
+    "name": "CycloneDX CLI",
+    "category": "Code.SupplyChain",
+    "wingetId": "CycloneDX.CLI",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/c/CycloneDX/CLI/0.33.1/CycloneDX.CLI.yaml",
+    "description": {
+      "en": "Validate, merge and convert CycloneDX software inventory files.",
+      "es": "Valida, combina y convierte inventarios de componentes de software en formato CycloneDX."
+    }
+  },
+  {
+    "id": "cosign",
+    "name": "Cosign",
+    "category": "Code.SupplyChain",
+    "wingetId": "Sigstore.Cosign",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/s/Sigstore/Cosign/3.1.4/Sigstore.Cosign.yaml",
+    "description": {
+      "en": "Verify signatures and attestations for software artifacts and container images.",
+      "es": "Verifica firmas y atestaciones de artefactos de software e imágenes de contenedor."
+    }
+  },
+  {
+    "id": "gitleaks",
+    "name": "Gitleaks",
+    "category": "Code.Secrets",
+    "wingetId": "Gitleaks.Gitleaks",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/g/Gitleaks/Gitleaks/8.30.1/Gitleaks.Gitleaks.yaml",
+    "description": {
+      "en": "Find accidentally committed secrets in repositories you manage.",
+      "es": "Localiza secretos publicados por error en repositorios que administras."
+    }
+  },
+  {
+    "id": "sops",
+    "name": "SOPS",
+    "category": "Code.Secrets",
+    "wingetId": "SecretsOPerationS.SOPS",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/s/SecretsOPerationS/SOPS/3.13.3/SecretsOPerationS.SOPS.yaml",
+    "description": {
+      "en": "Encrypt and edit structured configuration files that contain secrets.",
+      "es": "Cifra y edita archivos de configuración estructurados que contienen secretos."
+    }
+  },
+  {
+    "id": "opa",
+    "name": "Open Policy Agent",
+    "category": "Code.Policy",
+    "wingetId": "open-policy-agent.opa",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/o/open-policy-agent/opa/1.22.4/open-policy-agent.opa.yaml",
+    "description": {
+      "en": "Evaluate configuration and access control policies against structured input.",
+      "es": "Evalúa políticas de configuración y control de acceso con datos estructurados."
+    }
+  },
+  {
+    "id": "kubescape",
+    "name": "Kubescape",
+    "category": "Code.Policy",
+    "wingetId": "kubescape.kubescape",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/k/kubescape/kubescape/4.0.21/kubescape.kubescape.yaml",
+    "description": {
+      "en": "Review Kubernetes manifests and authorized clusters for configuration risks.",
+      "es": "Revisa manifiestos de Kubernetes y clústeres autorizados en busca de riesgos de configuración."
+    }
+  },
+  {
+    "id": "resource-hacker",
+    "name": "Resource Hacker",
+    "category": "ReverseEngineering.Identification",
+    "aliases": [
+      "ResHacker",
+      "PE resources"
+    ],
+    "wingetId": "AngusJohnson.ResourceHacker",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/a/AngusJohnson/ResourceHacker/5.2.8/AngusJohnson.ResourceHacker.yaml",
+    "publisherDownload": "https://www.angusj.com/resourcehacker/",
+    "description": {
+      "en": "Inspect and extract resources from Windows executables and libraries.",
+      "es": "Examina y extrae recursos de ejecutables y bibliotecas de Windows."
+    }
+  },
+  {
+    "id": "ghidra",
+    "name": "Ghidra",
+    "category": "ReverseEngineering.Native",
+    "aliases": [
+      "GhidraRun",
+      "NSA Ghidra",
+      "decompilador nativo"
+    ],
+    "wingetId": null,
+    "kali": "https://www.kali.org/tools/ghidra/",
+    "publisherDownload": "https://github.com/NationalSecurityAgency/ghidra/releases",
+    "description": {
+      "en": "Disassemble and decompile native binaries. The Windows distribution requires a compatible JDK.",
+      "es": "Desensambla y decompila binarios nativos. La distribución para Windows requiere un JDK compatible."
+    }
+  },
+  {
+    "id": "ida-free",
+    "name": "IDA Free",
+    "category": "ReverseEngineering.Native",
+    "aliases": [
+      "IDA",
+      "IDA Freeware",
+      "Hex-Rays",
+      "idafree"
+    ],
+    "wingetId": "Hex-Rays.IDA.Free",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/h/Hex-Rays/IDA/Free/8.4/Hex-Rays.IDA.Free.yaml",
+    "publisherDownload": "https://hex-rays.com/ida-free",
+    "description": {
+      "en": "Inspect x86 and x64 binaries. The current free edition uses cloud decompilation. WinGet lists 8.4.",
+      "es": "Examina binarios x86 y x64. La edición gratuita actual decompila en la nube. WinGet ofrece la versión 8.4."
+    }
+  },
+  {
+    "id": "binary-ninja-free",
+    "name": "Binary Ninja Free",
+    "category": "ReverseEngineering.Native",
+    "aliases": [
+      "Binja",
+      "Binary Ninja",
+      "Vector 35"
+    ],
+    "wingetId": null,
+    "publisherDownload": "https://binary.ninja/free/#binary-ninja-free",
+    "description": {
+      "en": "Analyze supported x86 and ARM binaries with the local free edition.",
+      "es": "Analiza binarios x86 y ARM compatibles con la edición gratuita de escritorio."
+    }
+  },
+  {
+    "id": "rizin",
+    "name": "Rizin",
+    "category": "ReverseEngineering.Native",
+    "aliases": [
+      "rz",
+      "Rizin CLI"
+    ],
+    "wingetId": "Rizin.Rizin",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/r/Rizin/Rizin/0.9.1/Rizin.Rizin.yaml",
+    "publisherDownload": "https://github.com/rizinorg/rizin/releases",
+    "description": {
+      "en": "Inspect executable formats, symbols and disassembly from the command line.",
+      "es": "Examina formatos ejecutables, símbolos y código desensamblado desde la línea de comandos."
+    }
+  },
+  {
+    "id": "radare2",
+    "name": "radare2",
+    "category": "ReverseEngineering.Native",
+    "aliases": [
+      "r2",
+      "radare"
+    ],
+    "wingetId": null,
+    "publisherDownload": "https://github.com/radareorg/radare2/releases",
+    "description": {
+      "en": "Inspect binary structures and disassemble native code from the command line.",
+      "es": "Examina estructuras binarias y desensambla código nativo desde la línea de comandos."
+    }
+  },
+  {
+    "id": "x64dbg",
+    "name": "x64dbg",
+    "category": "ReverseEngineering.Native",
+    "aliases": [
+      "x32dbg",
+      "x64 dbg",
+      "debugger",
+      "depurador"
+    ],
+    "wingetId": "x64dbg.x64dbg",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/x/x64dbg/x64dbg/2026.05.27/x64dbg.x64dbg.yaml",
+    "publisherDownload": "https://github.com/x64dbg/x64dbg/releases",
+    "description": {
+      "en": "Debug Windows x86 and x64 programs and inspect their assembly.",
+      "es": "Depura programas x86 y x64 de Windows y examina su código ensamblador."
+    }
+  },
+  {
+    "id": "dotpeek",
+    "name": "JetBrains dotPeek",
+    "category": "ReverseEngineering.DotNet",
+    "aliases": [
+      "dotPeek",
+      "dot peek",
+      "dotnet",
+      ".NET decompiler"
+    ],
+    "wingetId": "JetBrains.dotPeek",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/j/JetBrains/dotPeek/2026.3.0.2/JetBrains.dotPeek.yaml",
+    "publisherDownload": "https://www.jetbrains.com/decompiler/download/",
+    "description": {
+      "en": "Browse and decompile .NET assemblies in a desktop application.",
+      "es": "Explora y decompila ensamblados .NET en una aplicación de escritorio."
+    }
+  },
+  {
+    "id": "recaf",
+    "name": "Recaf",
+    "category": "ReverseEngineering.Jvm",
+    "aliases": [
+      "Recaf 4",
+      "Java decompiler",
+      "Java bytecode"
+    ],
+    "wingetId": null,
+    "publisherDownload": "https://github.com/Col-E/Recaf/releases",
+    "description": {
+      "en": "Inspect JVM bytecode and decompiled Java in a graphical workspace. Recaf 4 is an alpha release.",
+      "es": "Examina bytecode de la JVM y Java decompilado en una interfaz gráfica. Recaf 4 está en fase alfa."
+    }
+  },
+  {
+    "id": "vineflower",
+    "name": "Vineflower",
+    "category": "ReverseEngineering.Jvm",
+    "aliases": [
+      "Fernflower",
+      "Java decompiler",
+      "Java bytecode"
+    ],
+    "wingetId": null,
+    "publisherDownload": "https://github.com/Vineflower/vineflower/releases",
+    "description": {
+      "en": "Decompile JVM class files and JAR archives with the command-line tool.",
+      "es": "Decompila archivos de clase de la JVM y archivos JAR desde la línea de comandos."
+    }
+  },
+  {
+    "id": "cfr",
+    "name": "CFR",
+    "category": "ReverseEngineering.Jvm",
+    "aliases": [
+      "Class File Reader",
+      "Java decompiler",
+      "Java bytecode"
+    ],
+    "wingetId": null,
+    "publisherDownload": "https://github.com/leibnitz27/cfr/releases",
+    "description": {
+      "en": "Decompile Java class files and JAR archives with a standalone Java tool.",
+      "es": "Decompila archivos de clase Java y archivos JAR con una herramienta Java independiente."
+    }
+  },
+  {
+    "id": "jadx",
+    "name": "JADX",
+    "category": "ReverseEngineering.Android",
+    "aliases": [
+      "jadx-gui",
+      "jadx gui",
+      "Android decompiler",
+      "DEX decompiler"
+    ],
+    "wingetId": "Skylot.jadx",
+    "kali": "https://www.kali.org/tools/jadx/",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/s/Skylot/jadx/1.5.7/Skylot.jadx.yaml",
+    "publisherDownload": "https://github.com/skylot/jadx/releases",
+    "description": {
+      "en": "Inspect Android APK and DEX files and view decompiled code. The publisher offers a Windows build with Java.",
+      "es": "Examina archivos APK y DEX de Android y consulta el código decompilado. El proyecto ofrece una versión de Windows con Java."
+    }
+  },
+  {
+    "id": "pycdc",
+    "name": "PyCDC",
+    "category": "ReverseEngineering.Python",
+    "aliases": [
+      "pyc decompiler",
+      "Python decompiler",
+      "ejfkdev pycdc"
+    ],
+    "wingetId": null,
+    "publisherDownload": "https://github.com/ejfkdev/pycdc/releases",
+    "description": {
+      "en": "Decompile Python bytecode with the Windows build from the ejfkdev project.",
+      "es": "Decompila bytecode de Python con la versión de Windows del proyecto ejfkdev."
+    }
+  },
+  {
+    "id": "pycdas",
+    "name": "PyCDAS",
+    "category": "ReverseEngineering.Python",
+    "aliases": [
+      "pyc disassembler",
+      "Python disassembler",
+      "ejfkdev pycdas"
+    ],
+    "wingetId": null,
+    "publisherDownload": "https://github.com/ejfkdev/pycdc/releases",
+    "description": {
+      "en": "Disassemble Python bytecode into instructions with the Windows build from the ejfkdev project.",
+      "es": "Desensambla bytecode de Python en instrucciones con la versión de Windows del proyecto ejfkdev."
+    }
+  },
+  {
+    "id": "pylingual",
+    "name": "PyLingual",
+    "category": "ReverseEngineering.Python",
+    "aliases": [
+      "py lingual",
+      "pyc decompiler",
+      "Python decompiler"
+    ],
+    "wingetId": null,
+    "publisherProject": "https://github.com/syssec-utd/pylingual#setup",
+    "description": {
+      "en": "Decompile modern CPython bytecode. The project documents local setup from source and offers a web service.",
+      "es": "Decompila bytecode de CPython moderno. El proyecto documenta la instalación local desde código fuente y ofrece un servicio web."
+    }
+  },
+  {
+    "id": "jpexs-ffdec",
+    "name": "JPEXS Free Flash Decompiler",
+    "category": "ReverseEngineering.Flash",
+    "aliases": [
+      "FFDec",
+      "JPEXS",
+      "SWF decompiler",
+      "ActionScript"
+    ],
+    "wingetId": "JPEXS.FFDec",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/j/JPEXS/FFDec/26.5.0/JPEXS.FFDec.yaml",
+    "publisherDownload": "https://github.com/jindrapetrik/jpexs-decompiler/releases",
+    "description": {
+      "en": "Inspect Flash SWF assets and decompile ActionScript.",
+      "es": "Examina recursos SWF de Flash y decompila ActionScript."
+    }
+  },
+  {
+    "id": "temurin-25",
+    "name": "Eclipse Temurin JDK 25",
+    "category": "ReverseEngineering.Runtime",
+    "aliases": [
+      "jdk25",
+      "java25",
+      "java 25",
+      "Adoptium"
+    ],
+    "wingetId": "EclipseAdoptium.Temurin.25.JDK",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/e/EclipseAdoptium/Temurin/25/JDK/25.0.5.102/EclipseAdoptium.Temurin.25.JDK.yaml",
+    "publisherDownload": "https://adoptium.net/temurin/releases/?version=25",
+    "description": {
+      "en": "OpenJDK runtime and development kit used by the Java-based tools in this catalog.",
+      "es": "Entorno de ejecución y kit de desarrollo OpenJDK para las herramientas basadas en Java del catálogo."
+    }
+  }
+]

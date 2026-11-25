@@ -1,0 +1,46 @@
+[
+  {
+    "id": "wireshark",
+    "name": "Wireshark",
+    "category": "Networking.Traffic",
+    "wingetId": "WiresharkFoundation.Wireshark",
+    "description": {
+      "en": "Inspect network captures for troubleshooting and traffic analysis.",
+      "es": "Examina capturas de red para diagnosticar problemas y analizar tráfico."
+    },
+    "kali": "https://www.kali.org/tools/wireshark/"
+  },
+  {
+    "id": "zaproxy",
+    "name": "ZAP (OWASP ZAP)",
+    "category": "Web.Http",
+    "wingetId": "ZAP.ZAP",
+    "description": {
+      "en": "Inspect HTTP traffic during security reviews of web applications.",
+      "es": "Examina tráfico HTTP durante revisiones de seguridad de aplicaciones web."
+    },
+    "kali": "https://www.kali.org/tools/zaproxy/"
+  },
+  {
+    "id": "wfuzz",
+    "name": "wfuzz",
+    "category": "Web.Testing",
+    "wingetId": null,
+    "description": {
+      "en": "Web request testing utility.",
+      "es": "Utilidad para probar solicitudes web."
+    },
+    "kali": "https://www.kali.org/tools/wfuzz/"
+  },
+  {
+    "id": "exiftool",
+    "name": "ExifTool",
+    "category": "Forensics.Metadata",
+    "wingetId": "OliverBetz.ExifTool",
+    "description": {
+      "en": "Examine metadata in images, documents and other files.",
+      "es": "Examina metadatos de imágenes, documentos y otros archivos."
+    },
+    "kali": "https://www.kali.org/tools/libimage-exiftool-perl/"
+  }
+]

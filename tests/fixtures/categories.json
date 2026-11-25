@@ -1,0 +1,42 @@
+[
+  {
+    "id": "Networking",
+    "symbol": "~",
+    "icon": { "glyph": "≈", "accent": "teal" },
+    "name": { "en": "Networks", "es": "Redes" },
+    "children": [
+      {
+        "id": "Networking.Traffic",
+        "name": { "en": "Traffic analysis", "es": "Análisis de tráfico" }
+      }
+    ]
+  },
+  {
+    "id": "Web",
+    "symbol": "@",
+    "icon": { "glyph": "◎", "accent": "blue" },
+    "name": { "en": "Web", "es": "Web" },
+    "children": [
+      {
+        "id": "Web.Http",
+        "name": { "en": "HTTP inspection", "es": "Inspección HTTP" }
+      },
+      {
+        "id": "Web.Testing",
+        "name": { "en": "Request testing", "es": "Pruebas de solicitudes" }
+      }
+    ]
+  },
+  {
+    "id": "Forensics",
+    "symbol": "#",
+    "icon": { "glyph": "◇", "accent": "gold" },
+    "name": { "en": "Forensics", "es": "Análisis forense" },
+    "children": [
+      {
+        "id": "Forensics.Metadata",
+        "name": { "en": "File metadata", "es": "Metadatos de archivos" }
+      }
+    ]
+  }
+]

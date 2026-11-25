@@ -1,0 +1,10 @@
+/target/
+/dist/
+/Proofs/
+/LocalDocs/
+/config/preferences.json
+/config/release-check.json
+/config/.release-check.lock
+/config/last-self-update.json
+/config/last-operation.json
+/PenGrab.exe

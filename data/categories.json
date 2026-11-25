@@ -1,0 +1,183 @@
+[
+  {
+    "id": "Networking",
+    "symbol": "~",
+    "icon": { "glyph": "≈", "accent": "teal" },
+    "name": { "en": "Networks", "es": "Redes" },
+    "children": [
+      {
+        "id": "Networking.Inventory",
+        "name": { "en": "Host inventory", "es": "Inventario de red" }
+      },
+      {
+        "id": "Networking.Traffic",
+        "name": { "en": "Traffic analysis", "es": "Análisis de tráfico" }
+      },
+      {
+        "id": "Networking.Dns",
+        "name": { "en": "DNS & registration", "es": "DNS y registros" }
+      },
+      {
+        "id": "Networking.Performance",
+        "name": { "en": "Performance", "es": "Rendimiento" }
+      }
+    ]
+  },
+  {
+    "id": "Web",
+    "symbol": "@",
+    "icon": { "glyph": "◎", "accent": "blue" },
+    "name": { "en": "Web", "es": "Web" },
+    "children": [
+      {
+        "id": "Web.Http",
+        "name": { "en": "HTTP inspection", "es": "Inspección HTTP" }
+      },
+      {
+        "id": "Web.Testing",
+        "name": { "en": "Request testing", "es": "Pruebas de solicitudes" }
+      },
+      {
+        "id": "Web.Api",
+        "name": { "en": "API clients", "es": "Clientes de API" }
+      },
+      {
+        "id": "Web.Tls",
+        "name": { "en": "TLS & certificates", "es": "TLS y certificados" }
+      }
+    ]
+  },
+  {
+    "id": "ReverseEngineering",
+    "symbol": "*",
+    "icon": { "glyph": "⊞", "accent": "gold" },
+    "name": { "en": "Reverse engineering", "es": "Ingeniería inversa" },
+    "aliases": ["RE", "reverse", "reversing", "decompilers", "decompiladores"],
+    "children": [
+      {
+        "id": "ReverseEngineering.Identification",
+        "name": { "en": "File identification", "es": "Identificación de archivos" },
+        "aliases": ["PE", "file signatures", "firmas de archivos"]
+      },
+      {
+        "id": "ReverseEngineering.Native",
+        "name": { "en": "Native binaries", "es": "Binarios nativos" },
+        "aliases": ["native", "C++", "Rust", "Go", "disassembly", "desensamblado"]
+      },
+      {
+        "id": "ReverseEngineering.DotNet",
+        "name": { "en": ".NET assemblies", "es": "Ensamblados .NET" },
+        "aliases": ["dotnet", "C#", "CSharp", "VB.NET", "Unity Mono"]
+      },
+      {
+        "id": "ReverseEngineering.Jvm",
+        "name": { "en": "Java & JVM", "es": "Java y JVM" },
+        "aliases": ["Kotlin", "JAR", "JVM bytecode"]
+      },
+      {
+        "id": "ReverseEngineering.Android",
+        "name": { "en": "Android APK & DEX", "es": "Android APK y DEX" },
+        "aliases": ["Dalvik", "Android bytecode"]
+      },
+      {
+        "id": "ReverseEngineering.Python",
+        "name": { "en": "Python bytecode", "es": "Bytecode de Python" },
+        "aliases": ["PYC", "PYO", "CPython"]
+      },
+      {
+        "id": "ReverseEngineering.Flash",
+        "name": { "en": "Flash & SWF", "es": "Flash y SWF" },
+        "aliases": ["ActionScript"]
+      },
+      {
+        "id": "ReverseEngineering.Runtime",
+        "name": { "en": "Runtimes", "es": "Entornos de ejecución" },
+        "aliases": ["JDK", "Java runtime"]
+      }
+    ]
+  },
+  {
+    "id": "Forensics",
+    "symbol": "#",
+    "icon": { "glyph": "◇", "accent": "gold" },
+    "name": { "en": "Forensics", "es": "Análisis forense" },
+    "children": [
+      {
+        "id": "Forensics.Metadata",
+        "name": { "en": "File metadata", "es": "Metadatos de archivos" }
+      },
+      {
+        "id": "Forensics.Disk",
+        "name": { "en": "Disk images", "es": "Imágenes de disco" }
+      },
+      {
+        "id": "Forensics.Memory",
+        "name": { "en": "Memory captures", "es": "Capturas de memoria" }
+      },
+      {
+        "id": "Forensics.Events",
+        "name": { "en": "Event timelines", "es": "Cronologías de eventos" }
+      },
+      {
+        "id": "Forensics.Integrity",
+        "name": { "en": "File integrity", "es": "Integridad de archivos" }
+      },
+      {
+        "id": "Forensics.Binary",
+        "name": { "en": "Binary analysis", "es": "Análisis de binarios" }
+      },
+      {
+        "id": "Forensics.Triage",
+        "name": { "en": "File triage", "es": "Triaje de archivos" }
+      }
+    ]
+  },
+  {
+    "id": "Endpoint",
+    "symbol": "+",
+    "icon": { "glyph": "▣", "accent": "teal" },
+    "name": { "en": "Windows endpoint", "es": "Sistema Windows" },
+    "children": [
+      {
+        "id": "Endpoint.Processes",
+        "name": { "en": "Processes & handles", "es": "Procesos y descriptores" }
+      },
+      {
+        "id": "Endpoint.Memory",
+        "name": { "en": "Memory & dumps", "es": "Memoria y volcados" }
+      },
+      {
+        "id": "Endpoint.Startup",
+        "name": { "en": "Startup & drivers", "es": "Inicio y controladores" }
+      },
+      {
+        "id": "Endpoint.Telemetry",
+        "name": { "en": "System telemetry", "es": "Telemetría del sistema" }
+      }
+    ]
+  },
+  {
+    "id": "Code",
+    "symbol": "%",
+    "icon": { "glyph": "◆", "accent": "blue" },
+    "name": { "en": "Software auditing", "es": "Auditoría de software" },
+    "children": [
+      {
+        "id": "Code.Dependencies",
+        "name": { "en": "Dependency auditing", "es": "Auditoría de dependencias" }
+      },
+      {
+        "id": "Code.SupplyChain",
+        "name": { "en": "SBOMs & signatures", "es": "SBOM y firmas" }
+      },
+      {
+        "id": "Code.Secrets",
+        "name": { "en": "Secret management", "es": "Gestión de secretos" }
+      },
+      {
+        "id": "Code.Policy",
+        "name": { "en": "Configuration policies", "es": "Políticas de configuración" }
+      }
+    ]
+  }
+]
