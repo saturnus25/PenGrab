@@ -38,6 +38,8 @@ try {
     Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'PenGrab.bat') -Destination $bundle
     Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'data') -Destination $bundle -Recurse
     Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'docs/NonInteractive.md') -Destination $bundle
+    Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'LICENSE') -Destination $bundle
+    Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'THIRD-PARTY-NOTICES.md') -Destination $bundle
     if ($InstallerScript) {
         Copy-Item -LiteralPath $InstallerScript -Destination (Join-Path $bundle 'install.ps1')
         [IO.File]::WriteAllText((Join-Path $config 'release-version'), $version)

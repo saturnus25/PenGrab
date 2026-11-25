@@ -8,6 +8,7 @@
 
 [![Latest release](https://img.shields.io/github/v/release/saturnus25/PenGrab?style=for-the-badge&logo=github&label=Latest%20release&color=c24e57)](https://github.com/saturnus25/PenGrab/releases/latest)
 [![Windows x64](https://img.shields.io/badge/Portable-Windows%20x64-0078d4?style=for-the-badge)](#quick-start)
+[![MIT License](https://img.shields.io/badge/License-MIT-38845a?style=for-the-badge)](LICENSE)
 [![Languages](https://img.shields.io/badge/Language-English%20%7C%20Espa%C3%B1ol-4b6070?style=for-the-badge)](README.es.md)
 
 [Download](https://github.com/saturnus25/PenGrab/releases/latest) · [Quick start](#quick-start) · [Controls](#controls) · [Automation](docs/NonInteractive.md) · [Build](#build-from-source) · [Issues](https://github.com/saturnus25/PenGrab/issues) · [Español](README.es.md)
@@ -113,3 +114,7 @@ cargo test --release --locked
 [Package-Portable.ps1](Package-Portable.ps1) builds the Windows ZIP. [Package-Release.ps1](Package-Release.ps1) creates the signed manifest, installer and bootstrap. Release signing uses a maintainer key held outside version control. The legacy PowerShell prototype is available through `PenGrab.ps1`.
 
 See [AGENTS.md](AGENTS.md) for terminal design and verification conventions.
+
+## License
+
+PenGrab is distributed under the [MIT License](LICENSE). Dependency licenses and copyright notices are in [Third-party notices](THIRD-PARTY-NOTICES.md).

@@ -2,6 +2,7 @@
 name = "pengrab"
 version = "0.2.3"
 edition = "2024"
+license = "MIT"
 publish = false
 
 [dependencies]

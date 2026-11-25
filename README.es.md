@@ -53,3 +53,7 @@ El control **Todas las herramientas** permanece encima del árbol. Una rama marc
 ~~~
 
 Consulta el [contrato no interactivo](docs/NonInteractive.md) para seleccionar IDs, simular operaciones y leer los resultados en JSON. La [documentación en inglés](README.md#build-from-source) explica cómo compilar con Rust y preparar el paquete de Windows.
+
+## Licencia
+
+PenGrab se distribuye bajo la [licencia MIT](LICENSE). Las licencias y avisos de las dependencias están en [Third-party notices](THIRD-PARTY-NOTICES.md).
