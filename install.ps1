@@ -319,7 +319,13 @@ try {
         }
         $InstallPath = Select-InstallPath
     }
-    if (-not $InstallPath) { $InstallPath = Join-Path $env:LOCALAPPDATA 'Programs\PenGrab' }
+    if (-not $InstallPath) {
+        $InstallPath = Join-Path $env:LOCALAPPDATA 'Programs\PenGrab'
+        if ($Mode -eq 'Install' -and -not ($NonInteractive -or $DryRun -or $Confirmed)) {
+            $enteredPath = (Read-Host "Install folder (absolute path, Enter for $InstallPath)").Trim()
+            if ($enteredPath) { $InstallPath = $enteredPath.Trim('"') }
+        }
+    }
     $InstallPath = Resolve-AbsolutePath $InstallPath 'InstallPath'
     if ($ReleaseDirectory) { $ReleaseDirectory = Resolve-AbsolutePath $ReleaseDirectory 'ReleaseDirectory' }
     if ($PublicKeyPath) { $PublicKeyPath = Resolve-AbsolutePath $PublicKeyPath 'PublicKeyPath' }

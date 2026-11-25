@@ -33,7 +33,7 @@ Ejecuta este comando en **Windows PowerShell 5.1** o **PowerShell 7** para insta
 & ([ScriptBlock]::Create((irm -UseBasicParsing 'https://github.com/saturnus25/PenGrab/releases/latest/download/install.ps1')))
 ~~~
 
-La ubicación predeterminada es `%LOCALAPPDATA%\Programs\PenGrab`. El instalador admite `-InstallPath` para indicar una ruta absoluta o `-ChoosePath` para elegirla en el selector de carpetas.
+Cuando el instalador pregunte por la carpeta, escribe una ruta absoluta o pulsa **Enter** para usar `%LOCALAPPDATA%\Programs\PenGrab`. El instalador admite `-InstallPath` para indicar una ruta absoluta o `-ChoosePath` para elegirla en el selector de carpetas.
 
 ### 🪄 Abrir una sesión temporal
 

@@ -38,7 +38,7 @@ Run this command in **Windows PowerShell 5.1** or **PowerShell 7** to install Pe
 & ([ScriptBlock]::Create((irm -UseBasicParsing 'https://github.com/saturnus25/PenGrab/releases/latest/download/install.ps1')))
 ~~~
 
-The default location is `%LOCALAPPDATA%\Programs\PenGrab`. The installer also accepts `-InstallPath` for an absolute destination or `-ChoosePath` for a folder picker.
+When the installer asks for the folder, enter an absolute path or press **Enter** to use `%LOCALAPPDATA%\Programs\PenGrab`. The installer also accepts `-InstallPath` for an absolute destination or `-ChoosePath` for a folder picker.
 
 ### 🪄 Run a temporary session
 
