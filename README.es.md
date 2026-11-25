@@ -17,17 +17,33 @@
 
 ## Inicio rápido
 
+### 📦 ZIP portátil
+
 1. Descarga el **ZIP para Windows x64** de [GitHub Releases](https://github.com/saturnus25/PenGrab/releases/latest).
 2. Extrae la carpeta **PenGrab** completa en una ubicación con permisos de escritura y abre **PenGrab.bat**. Si quieres mover la aplicación, mueve la carpeta entera para conservar el catálogo y tus ajustes.
 3. Pulsa **F4** y cambia el idioma a **Español**. Usa **/** para buscar, **F3** para abrir el diagnóstico o **F1** para consultar la ayuda.
 
 El ZIP incluye el ejecutable y el catálogo. Puedes explorar las herramientas sin WinGet. WinGet sirve para consultar el inventario y gestionar paquetes.
 
-### Instalación y sesión temporal
+### ⚡ Instalar desde PowerShell
 
-[La última release](https://github.com/saturnus25/PenGrab/releases/latest) incluye `install.ps1` para instalar PenGrab y `bootstrap.ps1` para abrir una sesión temporal. Ambos validan la firma del manifiesto y la integridad del ZIP. Funcionan en **Windows PowerShell 5.1** y **PowerShell 7**. Revisa el script que descargues antes de ejecutarlo.
+Ejecuta este comando en **Windows PowerShell 5.1** o **PowerShell 7** para instalar PenGrab y abrirlo después de confirmar.
 
-El instalador usa `%LOCALAPPDATA%\Programs\PenGrab` por defecto. Puedes elegir otra carpeta con `-InstallPath` o `-ChoosePath`. El bootstrap extrae el ejecutable a una carpeta temporal y la elimina al salir.
+~~~powershell
+& ([ScriptBlock]::Create((irm -UseBasicParsing 'https://github.com/saturnus25/PenGrab/releases/latest/download/install.ps1')))
+~~~
+
+La ubicación predeterminada es `%LOCALAPPDATA%\Programs\PenGrab`. El instalador admite `-InstallPath` para indicar una ruta absoluta o `-ChoosePath` para elegirla en el selector de carpetas.
+
+### 🪄 Abrir una sesión temporal
+
+~~~powershell
+& ([ScriptBlock]::Create((irm -UseBasicParsing 'https://github.com/saturnus25/PenGrab/releases/latest/download/bootstrap.ps1')))
+~~~
+
+El bootstrap se ejecuta en memoria, extrae los archivos de la aplicación a una carpeta temporal y los elimina al cerrar la sesión.
+
+Los dos scripts comprueban la firma del manifiesto, el tamaño y el SHA-256 del ZIP. Puedes revisar los scripts en [GitHub Releases](https://github.com/saturnus25/PenGrab/releases/latest) antes de ejecutarlos. Para usar un paquete firmado local, pasa `-ReleaseDirectory` al script descargado.
 
 ## Controles
 
@@ -45,7 +61,7 @@ El control **Todas las herramientas** permanece encima del árbol. Una rama marc
 
 **Configuración** permite comparar el valor actual con la alternativa para idioma, tema, ratón, movimiento reducido, árbol de categorías y estados de paquetes. Usa **Enter** o haz clic en el valor para aplicar el cambio. **Diagnóstico** comprueba en paralelo el inventario y las actualizaciones que WinGet puede identificar.
 
-## Automatización y compilación
+## 🤖 Automatización y compilación
 
 ~~~powershell
 .\PenGrab.bat --catalog-json
@@ -54,6 +70,6 @@ El control **Todas las herramientas** permanece encima del árbol. Una rama marc
 
 Consulta el [contrato no interactivo](docs/NonInteractive.md) para seleccionar IDs, simular operaciones y leer los resultados en JSON. La [documentación en inglés](README.md#build-from-source) explica cómo compilar con Rust y preparar el paquete de Windows.
 
-## Licencia
+## 📜 Licencia
 
 PenGrab se distribuye bajo la [licencia MIT](LICENSE). Las licencias y avisos de las dependencias están en [Third-party notices](THIRD-PARTY-NOTICES.md).
