@@ -3,7 +3,10 @@
     "id": "nmap",
     "name": "Nmap",
     "aliases": [
-      "Network Mapper"
+      "Network Mapper",
+      "Zenmap",
+      "Nping",
+      "Ncat"
     ],
     "category": "Networking.Inventory",
     "wingetId": "Insecure.Nmap",
@@ -11,8 +14,8 @@
     "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/i/Insecure/Nmap/7.80/Insecure.Nmap.yaml",
     "publisherDownload": "https://nmap.org/download.html#windows",
     "description": {
-      "en": "Inventories hosts and services on authorized networks. WinGet offers 7.80 with an outdated Npcap; prefer the newer official Windows installer.",
-      "es": "Identifica equipos y servicios en redes autorizadas. WinGet ofrece 7.80 con un Npcap antiguo; se recomienda el instalador oficial más reciente para Windows."
+      "en": "Inventories hosts and services on authorized networks. The Windows distribution includes Zenmap, Nping and Ncat. WinGet offers 7.80 with an outdated Npcap. Prefer the official 7.993 Windows installer.",
+      "es": "Identifica equipos y servicios en redes autorizadas. La distribución de Windows incluye Zenmap, Nping y Ncat. WinGet ofrece 7.80 con un Npcap antiguo. Se recomienda el instalador oficial 7.993 para Windows."
     }
   },
   {
@@ -69,15 +72,19 @@
     "aliases": [
       "tshark",
       "packet capture",
-      "analizador de tráfico"
+      "analizador de tráfico",
+      "dumpcap",
+      "capinfos",
+      "editcap",
+      "mergecap"
     ],
     "category": "Networking.Traffic",
     "wingetId": "WiresharkFoundation.Wireshark",
     "kali": "https://www.kali.org/tools/wireshark/",
     "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/w/WiresharkFoundation/Wireshark/4.6.10/WiresharkFoundation.Wireshark.yaml",
     "description": {
-      "en": "Inspect network captures for troubleshooting and traffic analysis.",
-      "es": "Examina capturas de red para diagnosticar problemas y analizar tráfico."
+      "en": "Inspect packet captures for troubleshooting. The Windows distribution includes TShark, dumpcap, capinfos, editcap and mergecap. Npcap is an optional installation component.",
+      "es": "Examina capturas de tráfico para diagnóstico. La distribución de Windows incluye TShark, dumpcap, capinfos, editcap y mergecap. Npcap es un componente opcional del instalador."
     },
     "publisherProject": "https://www.wireshark.org/"
   },
@@ -403,10 +410,16 @@
     "wingetId": "GnuPG.Gpg4win",
     "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/g/GnuPG/Gpg4win/5.1.2/GnuPG.Gpg4win.yaml",
     "description": {
-      "en": "Verify OpenPGP signatures and manage keys on Windows.",
-      "es": "Verifica firmas OpenPGP y administra claves en Windows."
+      "en": "Verify OpenPGP signatures and manage keys with GnuPG and Kleopatra. The Windows distribution also provides optional Outlook and File Explorer integration.",
+      "es": "Verifica firmas OpenPGP y administra claves con GnuPG y Kleopatra. La distribución de Windows también ofrece integración opcional con Outlook y el Explorador de archivos."
     },
-    "publisherProject": "https://www.gpg4win.org/"
+    "publisherProject": "https://www.gpg4win.org/",
+    "aliases": [
+      "Kleopatra",
+      "GnuPG",
+      "GpgOL",
+      "GpgEX"
+    ]
   },
   {
     "id": "hxd",
@@ -1276,15 +1289,18 @@
       "VMMap",
       "Sigcheck",
       "SDelete",
-      "DebugView"
+      "DebugView",
+      "ADInsight",
+      "LiveKd",
+      "PipeList"
     ],
     "category": "Endpoint.Suites",
     "wingetId": "Microsoft.Sysinternals.Suite",
     "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/m/Microsoft/Sysinternals/Suite/2026-10-15/Microsoft.Sysinternals.Suite.yaml",
     "publisherProject": "https://learn.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite",
     "description": {
-      "en": "Collection of Windows administration and security utilities, including AccessChk, AD Explorer, ProcDump, WinObj, Process Explorer, Autoruns and PsTools. Overlaps individual catalog packages.",
-      "es": "Colección de utilidades de administración y seguridad de Windows, entre ellas AccessChk, AD Explorer, ProcDump, WinObj, Process Explorer, Autoruns y PsTools. Se solapa con paquetes individuales del catálogo."
+      "en": "Windows administration and diagnostic suite. Includes AccessChk, AccessEnum, AD Explorer, ADInsight, Coreinfo, ListDLLs, LiveKd, PipeList, ProcDump, WinObj and PsTools. Some components also have standalone entries.",
+      "es": "Suite de administración y diagnóstico de Windows. Incluye AccessChk, AccessEnum, AD Explorer, ADInsight, Coreinfo, ListDLLs, LiveKd, PipeList, ProcDump, WinObj y PsTools. Algunos componentes también tienen fichas independientes."
     }
   },
   {
@@ -1432,7 +1448,7 @@
     "category": "Forensics.Events",
     "wingetId": "NirSoft.BrowserDownloadsView",
     "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/n/NirSoft/BrowserDownloadsView/1.51/NirSoft.BrowserDownloadsView.yaml",
-    "publisherProject": "https://www.nirsoft.net/utils/browser_downloads_view.html",
+    "publisherProject": "https://www.nirsoft.net/utils/web_browser_downloads_view.html",
     "description": {
       "en": "Examines supported browser download history in authorized investigations.",
       "es": "Examina el historial de descargas de navegadores compatibles en investigaciones autorizadas."
@@ -2049,6 +2065,1972 @@
     "description": {
       "en": "Collection for partition recovery and file carving. Prefer the official stable download because WinGet 7.3 points to a work-in-progress build. Recovery operations may modify disks.",
       "es": "Colección de recuperación de particiones y extracción de archivos. Preferir la descarga estable oficial porque WinGet 7.3 apunta a una compilación en desarrollo. Las operaciones de recuperación pueden modificar discos."
+    }
+  },
+  {
+    "id": "ftk-imager",
+    "name": "FTK Imager",
+    "aliases": [
+      "AccessData FTK Imager",
+      "forensic acquisition"
+    ],
+    "category": "Forensics.Disk",
+    "publisherDownload": "https://www.exterro.com/ftk-downloads",
+    "description": {
+      "en": "Acquire and preview forensic disk images. Proprietary freeware distributed by Exterro.",
+      "es": "Adquiere y previsualiza imágenes forenses de disco. Utilidad gratuita de código cerrado distribuida por Exterro."
+    }
+  },
+  {
+    "id": "arsenal-image-mounter",
+    "name": "Arsenal Image Mounter",
+    "aliases": [
+      "AIM",
+      "E01 mounting"
+    ],
+    "category": "Forensics.Disk",
+    "publisherDownload": "https://arsenalrecon.com/products/arsenal-image-mounter/downloads/",
+    "description": {
+      "en": "Mount disk images as Windows disks for review. Installing the driver requires elevation. Some features require a paid license. Current builds require .NET 10.",
+      "es": "Monta imágenes como discos de Windows para examinarlas. Instalar el controlador requiere elevación. Algunas funciones requieren licencia de pago. Las compilaciones actuales requieren .NET 10."
+    }
+  },
+  {
+    "id": "amcacheparser",
+    "name": "AmcacheParser",
+    "aliases": [
+      "Amcache.hve",
+      "Amcache parser"
+    ],
+    "category": "Forensics.WindowsArtifacts",
+    "publisherDownload": "https://download.ericzimmermanstools.com/net/AmcacheParser.zip",
+    "description": {
+      "en": "Extract program and installation evidence from Windows Amcache hives. This download requires the .NET 10 Runtime.",
+      "es": "Extrae indicios de programas e instalaciones de los archivos Amcache de Windows. Esta descarga requiere el entorno de ejecución de .NET 10."
+    }
+  },
+  {
+    "id": "appcompatcacheparser",
+    "name": "AppCompatCacheParser",
+    "aliases": [
+      "ShimCache",
+      "application compatibility cache"
+    ],
+    "category": "Forensics.WindowsArtifacts",
+    "publisherDownload": "https://download.ericzimmermanstools.com/net/AppCompatCacheParser.zip",
+    "description": {
+      "en": "Parse Windows application compatibility cache records from offline Registry hives. This download requires the .NET 10 Runtime.",
+      "es": "Analiza registros de la caché de compatibilidad de aplicaciones en archivos del Registro de Windows. Esta descarga requiere el entorno de ejecución de .NET 10."
+    }
+  },
+  {
+    "id": "evtxecmd",
+    "name": "EvtxECmd",
+    "aliases": [
+      "EVTX parser",
+      "Windows event logs"
+    ],
+    "category": "Forensics.Events",
+    "publisherDownload": "https://download.ericzimmermanstools.com/net/EvtxECmd.zip",
+    "description": {
+      "en": "Parse Windows EVTX files and export mapped event fields for review. This download requires the .NET 10 Runtime.",
+      "es": "Analiza archivos EVTX de Windows y exporta campos de eventos mediante mapas. Esta descarga requiere el entorno de ejecución de .NET 10."
+    }
+  },
+  {
+    "id": "jlecmd",
+    "name": "JLECmd",
+    "aliases": [
+      "Jump List parser",
+      "automaticDestinations",
+      "customDestinations"
+    ],
+    "category": "Forensics.WindowsArtifacts",
+    "publisherDownload": "https://download.ericzimmermanstools.com/net/JLECmd.zip",
+    "description": {
+      "en": "Parse automatic and custom Windows Jump Lists from collected evidence. This download requires the .NET 10 Runtime.",
+      "es": "Analiza las Jump Lists automáticas y personalizadas de Windows en las evidencias recopiladas. Esta descarga requiere el entorno de ejecución de .NET 10."
+    }
+  },
+  {
+    "id": "jumplist-explorer",
+    "name": "JumpList Explorer",
+    "aliases": [
+      "Jump List viewer",
+      "JumpListExplorer"
+    ],
+    "category": "Forensics.WindowsArtifacts",
+    "publisherDownload": "https://download.ericzimmermanstools.com/net/JumpListExplorer.zip",
+    "description": {
+      "en": "Inspect Windows Jump Lists in a graphical viewer. Requires the .NET 10 Desktop Runtime.",
+      "es": "Examina las Jump Lists de Windows en un visor gráfico. Requiere el entorno de escritorio de .NET 10."
+    }
+  },
+  {
+    "id": "lecmd",
+    "name": "LECmd",
+    "aliases": [
+      "LNK parser",
+      "Windows shortcuts"
+    ],
+    "category": "Forensics.WindowsArtifacts",
+    "publisherDownload": "https://download.ericzimmermanstools.com/net/LECmd.zip",
+    "description": {
+      "en": "Parse shortcut targets, timestamps and other metadata from Windows LNK evidence. This download requires the .NET 10 Runtime.",
+      "es": "Extrae destinos, marcas de tiempo y otros metadatos de accesos directos LNK de Windows. Esta descarga requiere el entorno de ejecución de .NET 10."
+    }
+  },
+  {
+    "id": "mftecmd",
+    "name": "MFTECmd",
+    "aliases": [
+      "NTFS MFT",
+      "Master File Table",
+      "USN Journal"
+    ],
+    "category": "Forensics.Disk",
+    "publisherDownload": "https://download.ericzimmermanstools.com/net/MFTECmd.zip",
+    "description": {
+      "en": "Parse NTFS metadata including the MFT, USN journal and transaction log. This download requires the .NET 10 Runtime.",
+      "es": "Analiza metadatos NTFS, como la MFT, el diario USN y el registro de transacciones. Esta descarga requiere el entorno de ejecución de .NET 10."
+    }
+  },
+  {
+    "id": "mft-explorer",
+    "name": "MFTExplorer",
+    "aliases": [
+      "MFT Explorer",
+      "NTFS viewer"
+    ],
+    "category": "Forensics.Disk",
+    "publisherDownload": "https://download.ericzimmermanstools.com/net/MFTExplorer.zip",
+    "description": {
+      "en": "Browse a collected NTFS Master File Table in a graphical viewer. Requires the .NET 10 Desktop Runtime.",
+      "es": "Explora una tabla maestra de archivos NTFS recopilada mediante un visor gráfico. Requiere el entorno de escritorio de .NET 10."
+    }
+  },
+  {
+    "id": "pecmd",
+    "name": "PECmd",
+    "aliases": [
+      "Prefetch parser",
+      "PF files"
+    ],
+    "category": "Forensics.WindowsArtifacts",
+    "publisherDownload": "https://download.ericzimmermanstools.com/net/PECmd.zip",
+    "description": {
+      "en": "Parse Windows Prefetch files for execution timestamps and referenced files. This download requires the .NET 10 Runtime.",
+      "es": "Analiza archivos Prefetch de Windows para obtener fechas de ejecución y archivos referenciados. Esta descarga requiere el entorno de ejecución de .NET 10."
+    }
+  },
+  {
+    "id": "rbcmd",
+    "name": "RBCmd",
+    "aliases": [
+      "Recycle Bin parser",
+      "papelera"
+    ],
+    "category": "Forensics.WindowsArtifacts",
+    "publisherDownload": "https://download.ericzimmermanstools.com/net/RBCmd.zip",
+    "description": {
+      "en": "Extract deleted item paths and timestamps from Recycle Bin metadata. This download requires the .NET 10 Runtime.",
+      "es": "Extrae rutas y marcas de tiempo de la papelera de reciclaje de Windows. Esta descarga requiere el entorno de ejecución de .NET 10."
+    }
+  },
+  {
+    "id": "recentfilecacheparser",
+    "name": "RecentFileCacheParser",
+    "aliases": [
+      "RecentFileCache.bcf",
+      "legacy Windows artifact"
+    ],
+    "category": "Forensics.WindowsArtifacts",
+    "publisherDownload": "https://download.ericzimmermanstools.com/net/RecentFileCacheParser.zip",
+    "description": {
+      "en": "Examine RecentFileCache.bcf in forensic images of older Windows systems. This download requires the .NET 10 Runtime.",
+      "es": "Examina RecentFileCache.bcf en imágenes forenses de sistemas Windows antiguos. Esta descarga requiere el entorno de ejecución de .NET 10."
+    }
+  },
+  {
+    "id": "registry-explorer",
+    "name": "Registry Explorer",
+    "aliases": [
+      "RegistryExplorer",
+      "Windows hive viewer"
+    ],
+    "category": "Forensics.Registry",
+    "publisherDownload": "https://download.ericzimmermanstools.com/net/RegistryExplorer.zip",
+    "description": {
+      "en": "Browse and search offline Registry hives in a graphical interface. Requires the .NET 10 Desktop Runtime.",
+      "es": "Explora y busca en archivos del Registro sin conexión mediante una interfaz gráfica. Requiere el entorno de escritorio de .NET 10."
+    }
+  },
+  {
+    "id": "recmd",
+    "name": "RECmd",
+    "aliases": [
+      "Registry command line",
+      "Registry batch parser"
+    ],
+    "category": "Forensics.Registry",
+    "publisherDownload": "https://download.ericzimmermanstools.com/net/RECmd.zip",
+    "description": {
+      "en": "Search and process offline Registry hives with repeatable batch definitions. This download requires the .NET 10 Runtime.",
+      "es": "Busca y analiza archivos del Registro sin conexión mediante definiciones reutilizables por lotes. Esta descarga requiere el entorno de ejecución de .NET 10."
+    }
+  },
+  {
+    "id": "rla",
+    "name": "RLA",
+    "aliases": [
+      "Registry Log Application",
+      "Registry transaction log"
+    ],
+    "category": "Forensics.Registry",
+    "publisherDownload": "https://download.ericzimmermanstools.com/net/rla.zip",
+    "description": {
+      "en": "Replay transaction logs into a working copy of a Registry hive before analysis. This download requires the .NET 10 Runtime.",
+      "es": "Reaplica los registros de transacciones en una copia de trabajo del Registro antes de analizarla. Esta descarga requiere el entorno de ejecución de .NET 10."
+    }
+  },
+  {
+    "id": "sbecmd",
+    "name": "SBECmd",
+    "aliases": [
+      "ShellBags CLI",
+      "ShellBag parser"
+    ],
+    "category": "Forensics.WindowsArtifacts",
+    "publisherDownload": "https://download.ericzimmermanstools.com/net/SBECmd.zip",
+    "description": {
+      "en": "Export ShellBag records from Windows Registry evidence for timeline analysis. This download requires the .NET 10 Runtime.",
+      "es": "Exporta registros ShellBag del Registro de Windows para el análisis cronológico. Esta descarga requiere el entorno de ejecución de .NET 10."
+    }
+  },
+  {
+    "id": "shellbags-explorer",
+    "name": "ShellBags Explorer",
+    "aliases": [
+      "ShellBags GUI",
+      "ShellBagsExplorer"
+    ],
+    "category": "Forensics.WindowsArtifacts",
+    "publisherDownload": "https://download.ericzimmermanstools.com/net/ShellBagsExplorer.zip",
+    "description": {
+      "en": "Inspect ShellBag folder history in a graphical viewer. Requires the .NET 10 Desktop Runtime.",
+      "es": "Examina el historial de carpetas de ShellBag en un visor gráfico. Requiere el entorno de escritorio de .NET 10."
+    }
+  },
+  {
+    "id": "sdb-explorer",
+    "name": "SDB Explorer",
+    "aliases": [
+      "Shim database",
+      "application compatibility database"
+    ],
+    "category": "Forensics.WindowsArtifacts",
+    "publisherDownload": "https://download.ericzimmermanstools.com/net/SDBExplorer.zip",
+    "description": {
+      "en": "View Windows application compatibility databases in SDB format. Requires the .NET 10 Desktop Runtime.",
+      "es": "Examina bases de datos SDB de compatibilidad de aplicaciones de Windows. Requiere el entorno de escritorio de .NET 10."
+    }
+  },
+  {
+    "id": "sqlecmd",
+    "name": "SQLECmd",
+    "aliases": [
+      "SQLite forensic maps",
+      "SQLite parser"
+    ],
+    "category": "Forensics.Disk",
+    "publisherDownload": "https://download.ericzimmermanstools.com/net/SQLECmd.zip",
+    "description": {
+      "en": "Process collected SQLite databases using known artifact maps. This download requires the .NET 10 Runtime.",
+      "es": "Procesa bases de datos SQLite recopiladas mediante mapas de artefactos conocidos. Esta descarga requiere el entorno de ejecución de .NET 10."
+    }
+  },
+  {
+    "id": "srumecmd",
+    "name": "SrumECmd",
+    "aliases": [
+      "SRUDB.dat",
+      "System Resource Usage Monitor"
+    ],
+    "category": "Forensics.WindowsArtifacts",
+    "publisherDownload": "https://download.ericzimmermanstools.com/net/SrumECmd.zip",
+    "description": {
+      "en": "Parse Windows SRUM records for application resource and network usage evidence. This download requires the .NET 10 Runtime.",
+      "es": "Analiza registros SRUM de Windows para examinar el uso de recursos y red por aplicaciones. Esta descarga requiere el entorno de ejecución de .NET 10."
+    }
+  },
+  {
+    "id": "sumecmd",
+    "name": "SumECmd",
+    "aliases": [
+      "User Access Logging",
+      "UAL parser"
+    ],
+    "category": "Forensics.Events",
+    "publisherDownload": "https://download.ericzimmermanstools.com/net/SumECmd.zip",
+    "description": {
+      "en": "Parse Windows Server User Access Logging records from collected artifacts. This download requires the .NET 10 Runtime.",
+      "es": "Analiza registros de acceso de usuarios de Windows Server a partir de evidencias recopiladas. Esta descarga requiere el entorno de ejecución de .NET 10."
+    }
+  },
+  {
+    "id": "timeline-explorer",
+    "name": "Timeline Explorer",
+    "aliases": [
+      "TimelineExplorer",
+      "CSV timeline"
+    ],
+    "category": "Forensics.Events",
+    "publisherDownload": "https://download.ericzimmermanstools.com/net/TimelineExplorer.zip",
+    "description": {
+      "en": "Filter, group and compare timelines exported as CSV or Excel files. Requires the .NET 10 Desktop Runtime.",
+      "es": "Filtra, agrupa y compara cronologías exportadas a archivos CSV o Excel. Requiere el entorno de escritorio de .NET 10."
+    }
+  },
+  {
+    "id": "vscmount",
+    "name": "VSCMount",
+    "aliases": [
+      "Volume Shadow Copy",
+      "VSS mount"
+    ],
+    "category": "Forensics.Disk",
+    "publisherDownload": "https://download.ericzimmermanstools.com/net/VSCMount.zip",
+    "description": {
+      "en": "Expose Windows Volume Shadow Copies for examination. Administrative access can be required. This download requires the .NET 10 Runtime.",
+      "es": "Expone instantáneas de volumen de Windows para su análisis. Puede requerir permisos de administrador. Esta descarga requiere el entorno de ejecución de .NET 10."
+    }
+  },
+  {
+    "id": "wxtcmd",
+    "name": "WxTCmd",
+    "aliases": [
+      "Windows Timeline",
+      "ActivitiesCache.db"
+    ],
+    "category": "Forensics.WindowsArtifacts",
+    "publisherDownload": "https://download.ericzimmermanstools.com/net/WxTCmd.zip",
+    "description": {
+      "en": "Parse Windows Timeline activity records from supported historical systems. This download requires the .NET 10 Runtime.",
+      "es": "Analiza registros de actividad de Windows Timeline en las versiones históricas compatibles. Esta descarga requiere el entorno de ejecución de .NET 10."
+    }
+  },
+  {
+    "id": "winhex",
+    "name": "WinHex",
+    "aliases": [
+      "X-Ways WinHex",
+      "disk hex editor"
+    ],
+    "category": "Forensics.Binary",
+    "publisherDownload": "https://www.x-ways.net/winhex/",
+    "description": {
+      "en": "Inspect binary files, disks and images at byte level. Some forensic capabilities require a paid license.",
+      "es": "Examina archivos binarios, discos e imágenes a nivel de bytes. Algunas funciones forenses requieren licencia de pago."
+    }
+  },
+  {
+    "id": "exiv2",
+    "name": "Exiv2",
+    "aliases": [
+      "EXIF",
+      "IPTC",
+      "XMP"
+    ],
+    "category": "Forensics.Metadata",
+    "wingetId": "Exiv2.Exiv2",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/e/Exiv2/Exiv2/0.28.9/Exiv2.Exiv2.yaml",
+    "publisherDownload": "https://github.com/Exiv2/exiv2/releases/latest",
+    "description": {
+      "en": "Read and inspect EXIF, IPTC and XMP metadata in image files.",
+      "es": "Lee y examina metadatos EXIF, IPTC y XMP en archivos de imagen."
+    }
+  },
+  {
+    "id": "db-browser-sqlite",
+    "name": "DB Browser for SQLite",
+    "aliases": [
+      "DB4S",
+      "SQLite Browser"
+    ],
+    "category": "Forensics.Disk",
+    "wingetId": "DBBrowserForSQLite.DBBrowserForSQLite",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/d/DBBrowserForSQLite/DBBrowserForSQLite/3.13.1/DBBrowserForSQLite.DBBrowserForSQLite.yaml",
+    "publisherDownload": "https://github.com/sqlitebrowser/sqlitebrowser/releases/latest",
+    "description": {
+      "en": "Browse and query a working copy of a SQLite database in a graphical editor.",
+      "es": "Explora y consulta una copia de trabajo de una base de datos SQLite en un editor gráfico."
+    }
+  },
+  {
+    "id": "sqlite-cli",
+    "name": "SQLite CLI",
+    "aliases": [
+      "sqlite3",
+      "SQLite shell"
+    ],
+    "category": "Forensics.Disk",
+    "wingetId": "SQLite.SQLite",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/s/SQLite/SQLite/3.54.1/SQLite.SQLite.yaml",
+    "publisherDownload": "https://www.sqlite.org/download.html",
+    "description": {
+      "en": "Query SQLite databases and export structured results from the command line.",
+      "es": "Consulta bases de datos SQLite y exporta resultados estructurados desde la línea de comandos."
+    }
+  },
+  {
+    "id": "sqlite4n6",
+    "name": "sqlite4n6",
+    "aliases": [
+      "SQLite forensics",
+      "SQLite WAL analysis"
+    ],
+    "category": "Forensics.Disk",
+    "wingetId": "SecurityRonin.sqlite4n6",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/s/SecurityRonin/sqlite4n6/0.10.1/SecurityRonin.sqlite4n6.yaml",
+    "publisherDownload": "https://github.com/SecurityRonin/sqlite-forensic/releases/latest",
+    "description": {
+      "en": "Analyze SQLite journal and WAL evidence alongside a database copy.",
+      "es": "Analiza evidencias del diario y del archivo WAL junto a una copia de la base de datos SQLite."
+    }
+  },
+  {
+    "id": "dmde",
+    "name": "DMDE",
+    "aliases": [
+      "DM Disk Editor and Data Recovery"
+    ],
+    "category": "Forensics.Recovery",
+    "wingetId": "DMDE.DataRecovery.GUI",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/d/DMDE/DataRecovery/GUI/4.4.4/DMDE.DataRecovery.GUI.yaml",
+    "publisherDownload": "https://dmde.com/download.html",
+    "description": {
+      "en": "Inspect partition structures and recover files from supported filesystems. The free edition limits recovery operations.",
+      "es": "Examina estructuras de particiones y recupera archivos de sistemas compatibles. La edición gratuita limita algunas operaciones."
+    }
+  },
+  {
+    "id": "recuva",
+    "name": "Recuva",
+    "aliases": [
+      "Piriform Recuva",
+      "undelete"
+    ],
+    "category": "Forensics.Recovery",
+    "wingetId": "Piriform.Recuva",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/p/Piriform/Recuva/1.55.0.133/Piriform.Recuva.yaml",
+    "publisherDownload": "https://www.ccleaner.com/recuva/download",
+    "description": {
+      "en": "Recover deleted files from supported Windows volumes. Free and paid editions are available.",
+      "es": "Recupera archivos eliminados de volúmenes compatibles con Windows. Hay ediciones gratuita y de pago."
+    }
+  },
+  {
+    "id": "rclone",
+    "name": "Rclone",
+    "aliases": [
+      "cloud sync",
+      "cloud storage CLI"
+    ],
+    "category": "Forensics.Backup",
+    "wingetId": "Rclone.Rclone",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/r/Rclone/Rclone/1.76.0/Rclone.Rclone.yaml",
+    "publisherDownload": "https://github.com/rclone/rclone/releases/latest",
+    "description": {
+      "en": "Copy, compare and verify files across local disks and cloud storage providers.",
+      "es": "Copia, compara y verifica archivos entre discos locales y servicios de almacenamiento en la nube."
+    }
+  },
+  {
+    "id": "restic",
+    "name": "restic",
+    "aliases": [
+      "encrypted backups",
+      "snapshot backup"
+    ],
+    "category": "Forensics.Backup",
+    "wingetId": "restic.restic",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/r/restic/restic/0.20.0/restic.restic.yaml",
+    "publisherDownload": "https://github.com/restic/restic/releases/latest",
+    "description": {
+      "en": "Create and restore encrypted, deduplicated backup snapshots.",
+      "es": "Crea y restaura instantáneas de respaldo cifradas y deduplicadas."
+    }
+  },
+  {
+    "id": "kopia",
+    "name": "Kopia",
+    "aliases": [
+      "KopiaUI",
+      "encrypted backup GUI"
+    ],
+    "category": "Forensics.Backup",
+    "wingetId": "Kopia.KopiaUI",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/k/Kopia/KopiaUI/0.23.1/Kopia.KopiaUI.yaml",
+    "publisherDownload": "https://github.com/kopia/kopia/releases/latest",
+    "description": {
+      "en": "Create and restore encrypted snapshots through the Kopia desktop interface.",
+      "es": "Crea y restaura instantáneas cifradas mediante la interfaz de escritorio de Kopia."
+    }
+  },
+  {
+    "id": "duplicati",
+    "name": "Duplicati",
+    "aliases": [
+      "incremental backup",
+      "backup web UI"
+    ],
+    "category": "Forensics.Backup",
+    "wingetId": "Duplicati.Duplicati",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/d/Duplicati/Duplicati/2.4.1.1/Duplicati.Duplicati.yaml",
+    "publisherDownload": "https://github.com/duplicati/duplicati/releases/latest",
+    "description": {
+      "en": "Schedule encrypted incremental backups with a local web interface.",
+      "es": "Programa copias de seguridad incrementales cifradas mediante una interfaz web local."
+    }
+  },
+  {
+    "id": "freefilesync",
+    "name": "FreeFileSync",
+    "aliases": [
+      "folder comparison",
+      "folder synchronization"
+    ],
+    "category": "Forensics.Backup",
+    "publisherDownload": "https://freefilesync.org/download.php",
+    "description": {
+      "en": "Compare and synchronize folders. Some features are reserved for the Donation Edition.",
+      "es": "Compara y sincroniza carpetas. Algunas funciones están reservadas a la edición para donantes."
+    }
+  },
+  {
+    "id": "fastcopy",
+    "name": "FastCopy",
+    "aliases": [
+      "file copy verification",
+      "FastCopy Pro"
+    ],
+    "category": "Forensics.Backup",
+    "wingetId": "FastCopy.FastCopy",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/f/FastCopy/FastCopy/5.12.0/FastCopy.FastCopy.yaml",
+    "publisherDownload": "https://fastcopy.jp/",
+    "description": {
+      "en": "Copy large file trees and verify transfers. Some options require a commercial license.",
+      "es": "Copia grandes árboles de archivos y verifica las transferencias. Algunas opciones requieren licencia comercial."
+    }
+  },
+  {
+    "id": "winmerge",
+    "name": "WinMerge",
+    "aliases": [
+      "file diff",
+      "directory compare"
+    ],
+    "category": "Forensics.Integrity",
+    "wingetId": "WinMerge.WinMerge",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/w/WinMerge/WinMerge/2.16.60/WinMerge.WinMerge.yaml",
+    "publisherDownload": "https://winmerge.org/downloads/",
+    "description": {
+      "en": "Compare directories and inspect textual changes between files.",
+      "es": "Compara directorios y examina diferencias de texto entre archivos."
+    }
+  },
+  {
+    "id": "beyond-compare",
+    "name": "Beyond Compare",
+    "aliases": [
+      "Scooter Software",
+      "file comparison"
+    ],
+    "category": "Forensics.Integrity",
+    "wingetId": "ScooterSoftware.BeyondCompare.5",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/s/ScooterSoftware/BeyondCompare/5/5.2.8.33052/ScooterSoftware.BeyondCompare.5.yaml",
+    "publisherDownload": "https://www.scootersoftware.com/download",
+    "description": {
+      "en": "Compare files and directory trees across formats and storage locations. Commercial software with a trial.",
+      "es": "Compara archivos y carpetas en distintos formatos y ubicaciones. Software comercial con versión de prueba."
+    }
+  },
+  {
+    "id": "meld",
+    "name": "Meld",
+    "aliases": [
+      "three way diff",
+      "merge viewer"
+    ],
+    "category": "Forensics.Integrity",
+    "wingetId": "Meld.Meld",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/m/Meld/Meld/3.24.1/Meld.Meld.yaml",
+    "publisherDownload": "https://meldmerge.org/",
+    "description": {
+      "en": "Review two-way and three-way file differences visually.",
+      "es": "Revisa visualmente diferencias de archivos entre dos o tres versiones."
+    }
+  },
+  {
+    "id": "pestudio",
+    "name": "PEStudio",
+    "aliases": [
+      "winitor",
+      "PE indicators"
+    ],
+    "category": "ReverseEngineering.Identification",
+    "publisherDownload": "https://www.winitor.com/download2",
+    "description": {
+      "en": "Inspect Windows executables for metadata and static indicators without running them. Free and paid editions are available. The Basic edition is for nonprofessional use only.",
+      "es": "Examina metadatos e indicadores estáticos de ejecutables Windows sin ejecutarlos. Hay ediciones gratuita y de pago. La edición Basic se limita al uso no profesional."
+    }
+  },
+  {
+    "id": "malcat",
+    "name": "Malcat Lite",
+    "aliases": [
+      "Malcat",
+      "binary triage"
+    ],
+    "category": "Malware.Static",
+    "publisherDownload": "https://malcat.fr/download.html",
+    "description": {
+      "en": "Inspect binary structure and review static indicators. The Lite edition has feature limits.",
+      "es": "Inspecciona la estructura binaria y revisa indicadores estáticos. La edición Lite tiene funciones limitadas."
+    }
+  },
+  {
+    "id": "manalyze",
+    "name": "Manalyze",
+    "aliases": [
+      "PE static analysis",
+      "PE heuristics"
+    ],
+    "category": "Malware.Static",
+    "publisherDownload": "https://github.com/JusticeRage/Manalyze/releases/latest",
+    "description": {
+      "en": "Inspect Windows PE executables for structural and heuristic indicators without running them.",
+      "es": "Examina ejecutables PE de Windows para detectar indicadores estructurales y heurísticos sin ejecutarlos."
+    }
+  },
+  {
+    "id": "llvm",
+    "name": "LLVM",
+    "aliases": [
+      "Clang",
+      "LLDB",
+      "llvm-objdump",
+      "llvm-readobj",
+      "llvm-dis"
+    ],
+    "category": "ReverseEngineering.Native",
+    "wingetId": "LLVM.LLVM",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/l/LLVM/LLVM/23.1.6/LLVM.LLVM.yaml",
+    "publisherDownload": "https://github.com/llvm/llvm-project/releases/latest",
+    "description": {
+      "en": "The Windows LLVM toolchain includes Clang, LLDB and object-file inspection utilities. Building native projects may need the Windows SDK.",
+      "es": "La distribución de LLVM para Windows incluye Clang, LLDB y utilidades para inspeccionar archivos objeto. Compilar proyectos nativos puede requerir el SDK de Windows."
+    }
+  },
+  {
+    "id": "unicorn",
+    "name": "Unicorn Engine",
+    "aliases": [
+      "Unicorn emulator",
+      "CPU emulation"
+    ],
+    "category": "ReverseEngineering.Native",
+    "publisherDownload": "https://pypi.org/project/unicorn/",
+    "description": {
+      "en": "Emulate supported CPU instructions in controlled local analysis. The Windows wheel requires Python.",
+      "es": "Emula instrucciones de CPU compatibles en análisis local controlado. El paquete de Windows requiere Python."
+    }
+  },
+  {
+    "id": "lessmsi",
+    "name": "lessmsi",
+    "aliases": [
+      "Less MSIerables",
+      "MSI extractor"
+    ],
+    "category": "ReverseEngineering.Identification",
+    "wingetId": "activescott.lessmsi",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/a/activescott/lessmsi/2.12.9/activescott.lessmsi.yaml",
+    "publisherDownload": "https://github.com/activescott/lessmsi/releases/latest",
+    "description": {
+      "en": "Inspect Windows Installer tables and extract MSI contents without installing the package.",
+      "es": "Examina tablas de Windows Installer y extrae el contenido de MSI sin instalar el paquete."
+    }
+  },
+  {
+    "id": "oletools",
+    "name": "oletools",
+    "aliases": [
+      "olevba",
+      "oleobj",
+      "oleid",
+      "rtfobj",
+      "mraptor"
+    ],
+    "category": "Malware.Static",
+    "publisherDownload": "https://pypi.org/project/oletools/",
+    "description": {
+      "en": "Inspect Office document structures, embedded objects and VBA indicators. Requires Python.",
+      "es": "Examina estructuras de documentos de Office, objetos incrustados e indicadores de VBA. Requiere Python."
+    }
+  },
+  {
+    "id": "oledump",
+    "name": "oledump.py",
+    "aliases": [
+      "Didier Stevens",
+      "OLE streams"
+    ],
+    "category": "Malware.Static",
+    "publisherDownload": "https://blog.didierstevens.com/programs/oledump-py/",
+    "description": {
+      "en": "Inspect streams inside OLE compound documents and Office files. Requires Python.",
+      "es": "Examina flujos OLE en documentos compuestos y archivos de Office. Requiere Python."
+    }
+  },
+  {
+    "id": "microsoft-safety-scanner",
+    "name": "Microsoft Safety Scanner",
+    "aliases": [
+      "MSERT",
+      "Microsoft malware scanner"
+    ],
+    "category": "Malware.Static",
+    "publisherDownload": "https://learn.microsoft.com/en-us/defender-endpoint/safety-scanner-download",
+    "description": {
+      "en": "Run an on-demand scan with Microsoft's standalone scanner. Download a new copy after the ten-day expiry.",
+      "es": "Ejecuta un análisis bajo demanda con el escáner independiente de Microsoft. Descarga una copia nueva tras los diez días de caducidad."
+    }
+  },
+  {
+    "id": "microsoft-attack-surface-analyzer",
+    "name": "Microsoft Attack Surface Analyzer",
+    "aliases": [
+      "ASA",
+      "configuration differences"
+    ],
+    "category": "Endpoint.Policy",
+    "publisherDownload": "https://www.nuget.org/packages/Microsoft.CST.AttackSurfaceAnalyzer.CLI/",
+    "description": {
+      "en": "Compare system state before and after a software change to review affected settings and files. The CLI is distributed as a .NET tool targeting .NET 8.",
+      "es": "Compara el estado del sistema antes y después de un cambio de software para revisar los archivos y ajustes afectados. La CLI se distribuye como herramienta de .NET con destino a .NET 8."
+    }
+  },
+  {
+    "id": "noriben",
+    "name": "Noriben",
+    "aliases": [
+      "Procmon reports",
+      "behavior logs"
+    ],
+    "category": "Malware.Dynamic",
+    "publisherDownload": "https://github.com/Rurik/Noriben/releases/latest",
+    "description": {
+      "en": "Summarize an offline analysis session from Process Monitor activity. Requires Python and Process Monitor.",
+      "es": "Resume sesiones de análisis locales a partir de actividad de Process Monitor. Requiere Python y Process Monitor."
+    }
+  },
+  {
+    "id": "npcap",
+    "name": "Npcap",
+    "aliases": [
+      "NPF",
+      "Windows packet capture driver"
+    ],
+    "category": "Networking.Traffic",
+    "publisherDownload": "https://npcap.com/#download",
+    "description": {
+      "en": "Capture network traffic locally through the Windows packet capture driver. Wireshark can include it. Installing the driver requires elevation and redistribution is subject to the Npcap license.",
+      "es": "Captura tráfico local mediante el controlador de Windows. Wireshark puede incluirlo. Instalar el controlador requiere elevación y su redistribución está sujeta a la licencia de Npcap."
+    }
+  },
+  {
+    "id": "networkminer",
+    "name": "NetworkMiner",
+    "aliases": [
+      "NETRESEC",
+      "PCAP extraction"
+    ],
+    "category": "Networking.Traffic",
+    "publisherDownload": "https://www.netresec.com/?page=NetworkMiner",
+    "description": {
+      "en": "Extract protocol and file artifacts from captured network traffic. Free and commercial editions are available.",
+      "es": "Extrae artefactos de protocolos y archivos de capturas de red. Hay ediciones gratuita y comercial."
+    }
+  },
+  {
+    "id": "portqry",
+    "name": "PortQry",
+    "aliases": [
+      "PortQry v2",
+      "service connectivity"
+    ],
+    "category": "Networking.Performance",
+    "publisherDownload": "https://learn.microsoft.com/en-us/troubleshoot/windows-server/networking/portqry-command-line-port-scanner-v2",
+    "description": {
+      "en": "Diagnose TCP and UDP connectivity to services you administer. Microsoft documents this legacy utility for Windows Server diagnostics.",
+      "es": "Diagnostica la conectividad TCP y UDP de servicios que administras. Microsoft documenta esta utilidad heredada para el diagnóstico de Windows Server."
+    }
+  },
+  {
+    "id": "winmtr",
+    "name": "WinMTR Refresh",
+    "aliases": [
+      "WinMTR",
+      "Windows MTR",
+      "packet loss traceroute"
+    ],
+    "category": "Networking.Performance",
+    "wingetId": "leeter.WinMTR",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/l/leeter/WinMTR/0.99/leeter.WinMTR.yaml",
+    "publisherDownload": "https://github.com/leeter/WinMTR-refresh/releases/latest",
+    "description": {
+      "en": "A maintained WinMTR fork for tracking route changes, latency and packet loss.",
+      "es": "Versión mantenida de WinMTR para registrar cambios de ruta, latencia y pérdida de paquetes."
+    }
+  },
+  {
+    "id": "tcping",
+    "name": "tcping",
+    "aliases": [
+      "TCP ping",
+      "TCP latency"
+    ],
+    "category": "Networking.Performance",
+    "wingetId": "pj.tcping",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/p/pj/tcping/2.8.0/pj.tcping.yaml",
+    "publisherDownload": "https://github.com/pouriyajamshidi/tcping/releases/latest",
+    "description": {
+      "en": "Measure round-trip connection times and interruptions for a service endpoint you administer.",
+      "es": "Mide el tiempo de conexión y las interrupciones de un servicio que administras."
+    }
+  },
+  {
+    "id": "netlimiter",
+    "name": "NetLimiter",
+    "aliases": [
+      "bandwidth monitor",
+      "traffic shaping"
+    ],
+    "category": "Networking.Performance",
+    "wingetId": "LocktimeSoftware.NetLimiter",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/l/LocktimeSoftware/NetLimiter/5.3.28.0/LocktimeSoftware.NetLimiter.yaml",
+    "publisherDownload": "https://www.netlimiter.com/download",
+    "description": {
+      "en": "Monitor per-process network use and manage bandwidth on Windows. Paid software with a trial and a driver that requires elevation.",
+      "es": "Supervisa tráfico por proceso y administra el ancho de banda en Windows. Software de pago con prueba y controlador que requiere elevación."
+    }
+  },
+  {
+    "id": "dns-lookup-view",
+    "name": "DNSLookupView",
+    "aliases": [
+      "DNS client events",
+      "ETW DNS"
+    ],
+    "category": "Networking.Dns",
+    "wingetId": "NirSoft.DNSLookupView",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/n/NirSoft/DNSLookupView/1.21/NirSoft.DNSLookupView.yaml",
+    "publisherDownload": "https://www.nirsoft.net/utils/dns_lookup_view.html",
+    "description": {
+      "en": "Observe Windows DNS Client lookup events for troubleshooting.",
+      "es": "Observa eventos de consulta del cliente DNS de Windows para diagnóstico."
+    }
+  },
+  {
+    "id": "wifi-diagnostics-view",
+    "name": "WifiDiagnosticsView",
+    "aliases": [
+      "Windows Wi-Fi events",
+      "WLAN diagnostics"
+    ],
+    "category": "Networking.Performance",
+    "wingetId": "NirSoft.WifiDiagnosticsView",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/n/NirSoft/WifiDiagnosticsView/1.09/NirSoft.WifiDiagnosticsView.yaml",
+    "publisherDownload": "https://www.nirsoft.net/utils/wifi_diagnostics_view.html",
+    "description": {
+      "en": "Review local Windows wireless connection and disconnection events.",
+      "es": "Revisa eventos locales de conexión y desconexión inalámbrica en Windows."
+    }
+  },
+  {
+    "id": "wifi-info-view",
+    "name": "WifiInfoView",
+    "aliases": [
+      "WLAN channels",
+      "WiFi signal"
+    ],
+    "category": "Networking.Performance",
+    "wingetId": "NirSoft.WifiInfoView",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/n/NirSoft/WifiInfoView/3.00/NirSoft.WifiInfoView.yaml",
+    "publisherDownload": "https://www.nirsoft.net/utils/wifi_information_view.html",
+    "description": {
+      "en": "Read Wi-Fi channel, band and signal data reported by the Windows wireless adapter.",
+      "es": "Lee canales, bandas y niveles de señal registrados por el adaptador inalámbrico de Windows."
+    }
+  },
+  {
+    "id": "dnscrypt-proxy",
+    "name": "DNSCrypt-proxy",
+    "aliases": [
+      "DNSCrypt",
+      "DNS over HTTPS",
+      "DoH"
+    ],
+    "category": "Networking.Dns",
+    "publisherDownload": "https://github.com/DNSCrypt/dnscrypt-proxy/releases/latest",
+    "description": {
+      "en": "Run a local resolver proxy supporting encrypted DNS. System resolver changes require separate configuration.",
+      "es": "Ejecuta un proxy local con DNS cifrado. Cambiar el resolvedor del sistema requiere configuración adicional."
+    }
+  },
+  {
+    "id": "unbound",
+    "name": "Unbound",
+    "aliases": [
+      "NLnet Labs",
+      "DNSSEC resolver"
+    ],
+    "category": "Networking.Dns",
+    "wingetId": "NLnetLabs.Unbound",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/n/NLnetLabs/Unbound/1.26.2/NLnetLabs.Unbound.yaml",
+    "publisherDownload": "https://nlnetlabs.nl/projects/unbound/download/",
+    "description": {
+      "en": "Validate and cache DNS answers with a recursive resolver.",
+      "es": "Valida y almacena respuestas DNS mediante un resolvedor recursivo."
+    }
+  },
+  {
+    "id": "shellcheck",
+    "name": "ShellCheck",
+    "aliases": [
+      "shell lint",
+      "Bash linter"
+    ],
+    "category": "Code.Static",
+    "wingetId": "koalaman.shellcheck",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/k/koalaman/shellcheck/0.11.0/koalaman.shellcheck.yaml",
+    "publisherDownload": "https://github.com/koalaman/shellcheck/releases/latest",
+    "description": {
+      "en": "Lint shell scripts from Windows and find fragile quoting or command usage.",
+      "es": "Analiza scripts de shell desde Windows y detecta errores de comillas o uso de comandos."
+    }
+  },
+  {
+    "id": "hadolint",
+    "name": "Hadolint",
+    "aliases": [
+      "Dockerfile linter"
+    ],
+    "category": "Code.Static",
+    "wingetId": "hadolint.hadolint",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/h/hadolint/hadolint/2.15.1/hadolint.hadolint.yaml",
+    "publisherDownload": "https://github.com/hadolint/hadolint/releases/latest",
+    "description": {
+      "en": "Review Dockerfiles for maintainability and insecure defaults.",
+      "es": "Revisa la mantenibilidad y las opciones inseguras por defecto de Dockerfiles."
+    }
+  },
+  {
+    "id": "semgrep",
+    "name": "Semgrep",
+    "aliases": [
+      "SAST",
+      "static analysis rules"
+    ],
+    "category": "Code.Static",
+    "publisherDownload": "https://pypi.org/project/semgrep/",
+    "description": {
+      "en": "Run local rule-based source analysis. Review the publisher's Windows support and rule license before use. Native Windows support is in beta. The wheel requires 64-bit Windows and Python 3.10 or newer.",
+      "es": "Analiza código local mediante reglas. Revisa la compatibilidad con Windows y la licencia de las reglas del editor. La compatibilidad nativa con Windows está en beta. El paquete requiere Windows de 64 bits y Python 3.10 o posterior."
+    }
+  },
+  {
+    "id": "codeql",
+    "name": "CodeQL CLI",
+    "aliases": [
+      "GitHub CodeQL",
+      "semantic source analysis"
+    ],
+    "category": "Code.Static",
+    "publisherDownload": "https://github.com/github/codeql-cli-binaries/releases/latest",
+    "description": {
+      "en": "Analyze local source code with CodeQL databases. GitHub terms govern commercial and private-repository use.",
+      "es": "Analiza código fuente local mediante bases de datos CodeQL. Las condiciones de GitHub rigen el uso comercial y en repositorios privados."
+    }
+  },
+  {
+    "id": "cargo-audit",
+    "name": "cargo-audit",
+    "aliases": [
+      "RustSec",
+      "Cargo.lock audit"
+    ],
+    "category": "Code.Dependencies",
+    "publisherDownload": "https://github.com/rustsec/rustsec/releases/latest",
+    "description": {
+      "en": "Check Cargo.lock dependencies against the RustSec advisory database.",
+      "es": "Comprueba dependencias de Cargo.lock frente a la base de avisos de RustSec."
+    }
+  },
+  {
+    "id": "cargo-deny",
+    "name": "cargo-deny",
+    "aliases": [
+      "Rust dependency policy",
+      "Cargo licenses"
+    ],
+    "category": "Code.Dependencies",
+    "publisherDownload": "https://github.com/EmbarkStudios/cargo-deny/releases/latest",
+    "description": {
+      "en": "Audit Rust dependency advisories, license policy and allowed sources.",
+      "es": "Audita avisos, licencias y orígenes permitidos de dependencias de Rust."
+    }
+  },
+  {
+    "id": "pip-audit",
+    "name": "pip-audit",
+    "aliases": [
+      "Python dependency audit",
+      "PyPA audit"
+    ],
+    "category": "Code.Dependencies",
+    "publisherDownload": "https://pypi.org/project/pip-audit/",
+    "description": {
+      "en": "Check Python dependency versions for known vulnerabilities. Requires Python. The current package requires Python 3.10 or newer.",
+      "es": "Comprueba si las versiones de dependencias de Python tienen vulnerabilidades conocidas. Requiere Python. El paquete actual requiere Python 3.10 o posterior."
+    }
+  },
+  {
+    "id": "owasp-dependency-check",
+    "name": "OWASP Dependency-Check",
+    "aliases": [
+      "OWASP DC",
+      "software composition analysis"
+    ],
+    "category": "Code.Dependencies",
+    "publisherDownload": "https://github.com/dependency-check/DependencyCheck/releases/latest",
+    "description": {
+      "en": "Check project dependencies against public vulnerability data. Requires Java and the publisher recommends an NVD API key.",
+      "es": "Comprueba dependencias frente a datos públicos de vulnerabilidades. Requiere Java y el editor recomienda una clave de la API de NVD."
+    }
+  },
+  {
+    "id": "actionlint",
+    "name": "actionlint",
+    "aliases": [
+      "GitHub Actions lint",
+      "workflow syntax"
+    ],
+    "category": "Code.Static",
+    "wingetId": "rhysd.actionlint",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/r/rhysd/actionlint/1.7.12/rhysd.actionlint.yaml",
+    "publisherDownload": "https://github.com/rhysd/actionlint/releases/latest",
+    "description": {
+      "en": "Check GitHub Actions workflow syntax and expression types locally.",
+      "es": "Comprueba de forma local la sintaxis y los tipos de expresiones de flujos de GitHub Actions."
+    }
+  },
+  {
+    "id": "zizmor",
+    "name": "zizmor",
+    "aliases": [
+      "GitHub Actions audit",
+      "workflow permissions"
+    ],
+    "category": "Code.Static",
+    "wingetId": "zizmor.zizmor",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/z/zizmor/zizmor/1.33.1/zizmor.zizmor.yaml",
+    "publisherDownload": "https://github.com/zizmorcore/zizmor/releases/latest",
+    "description": {
+      "en": "Audit GitHub Actions definitions for risky permissions and unsafe expression use.",
+      "es": "Audita definiciones de GitHub Actions para detectar permisos peligrosos y expresiones inseguras."
+    }
+  },
+  {
+    "id": "ruff",
+    "name": "Ruff",
+    "aliases": [
+      "Python linter",
+      "Bandit rules"
+    ],
+    "category": "Code.Static",
+    "wingetId": "astral-sh.ruff",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/a/astral-sh/ruff/0.17.6/astral-sh.ruff.yaml",
+    "publisherDownload": "https://github.com/astral-sh/ruff/releases/latest",
+    "description": {
+      "en": "Lint Python code with rule sets that include security checks.",
+      "es": "Analiza código Python con conjuntos de reglas que incluyen comprobaciones de seguridad."
+    }
+  },
+  {
+    "id": "cppcheck",
+    "name": "Cppcheck",
+    "aliases": [
+      "C static analysis",
+      "C++ static analysis"
+    ],
+    "category": "Code.Static",
+    "wingetId": "Cppcheck.Cppcheck",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/c/Cppcheck/Cppcheck/2.22.0/Cppcheck.Cppcheck.yaml",
+    "publisherDownload": "https://github.com/cppcheck-opensource/cppcheck/releases/latest",
+    "description": {
+      "en": "Analyze C and C++ source for defects and unsafe code patterns.",
+      "es": "Analiza código C y C++ para identificar defectos y patrones inseguros."
+    }
+  },
+  {
+    "id": "notary-notation",
+    "name": "Notation",
+    "aliases": [
+      "Notary Project",
+      "OCI signature verification"
+    ],
+    "category": "Code.SupplyChain",
+    "wingetId": "NotaryProject.Notation",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/n/NotaryProject/Notation/1.3.2/NotaryProject.Notation.yaml",
+    "publisherDownload": "https://github.com/notaryproject/notation/releases/latest",
+    "description": {
+      "en": "Sign and verify OCI artifacts using a trust policy.",
+      "es": "Firma y verifica artefactos OCI mediante una política de confianza."
+    }
+  },
+  {
+    "id": "oras",
+    "name": "ORAS",
+    "aliases": [
+      "OCI Registry as Storage",
+      "OCI artifacts"
+    ],
+    "category": "Code.SupplyChain",
+    "wingetId": "ORASProject.ORAS",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/o/ORASProject/ORAS/1.4.0/ORASProject.ORAS.yaml",
+    "publisherDownload": "https://github.com/oras-project/oras/releases/latest",
+    "description": {
+      "en": "Inspect and transfer SBOMs and other artifacts in OCI registries.",
+      "es": "Examina y transfiere SBOM y otros artefactos en registros OCI."
+    }
+  },
+  {
+    "id": "dive",
+    "name": "dive",
+    "aliases": [
+      "container layer inspection",
+      "image diff"
+    ],
+    "category": "Code.SupplyChain",
+    "wingetId": "wagoodman.dive",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/w/wagoodman/dive/0.13.1/wagoodman.dive.yaml",
+    "publisherDownload": "https://github.com/wagoodman/dive/releases/latest",
+    "description": {
+      "en": "Inspect files and changes by layer in container images. Live images can require an image engine.",
+      "es": "Examina archivos y cambios por capa en imágenes de contenedores. Las imágenes locales pueden requerir un motor compatible."
+    }
+  },
+  {
+    "id": "pmd",
+    "name": "PMD",
+    "aliases": [
+      "CPD",
+      "Java static analysis"
+    ],
+    "category": "Code.Static",
+    "publisherDownload": "https://github.com/pmd/pmd/releases/latest",
+    "description": {
+      "en": "Scan local source for defects and identify copied code with CPD. Requires Java.",
+      "es": "Analiza código local para detectar defectos y localiza código duplicado con CPD. Requiere Java."
+    }
+  },
+  {
+    "id": "spotbugs",
+    "name": "SpotBugs",
+    "aliases": [
+      "FindBugs",
+      "Java bytecode audit"
+    ],
+    "category": "Code.Static",
+    "publisherDownload": "https://github.com/spotbugs/spotbugs/releases/latest",
+    "description": {
+      "en": "Analyze JVM bytecode for likely defects. Requires Java.",
+      "es": "Analiza bytecode de la JVM para identificar posibles defectos. Requiere Java."
+    }
+  },
+  {
+    "id": "checkstyle",
+    "name": "Checkstyle",
+    "aliases": [
+      "Java source conventions",
+      "Java lint"
+    ],
+    "category": "Code.Static",
+    "publisherDownload": "https://github.com/checkstyle/checkstyle/releases/latest",
+    "description": {
+      "en": "Validate Java source against repeatable style and structure rules. Requires Java.",
+      "es": "Valida código Java mediante reglas reproducibles de estilo y estructura. Requiere Java."
+    }
+  },
+  {
+    "id": "powershell-script-analyzer",
+    "name": "PSScriptAnalyzer",
+    "aliases": [
+      "PowerShell script lint",
+      "PSSA"
+    ],
+    "category": "Code.Static",
+    "publisherDownload": "https://www.powershellgallery.com/packages/PSScriptAnalyzer",
+    "description": {
+      "en": "Review PowerShell scripts for errors and unsafe patterns. Distributed as a PowerShell module. Supports Windows PowerShell 5.1 and PowerShell 7.",
+      "es": "Revisa scripts de PowerShell para detectar errores y patrones inseguros. Se distribuye como módulo de PowerShell. Compatible con Windows PowerShell 5.1 y PowerShell 7."
+    }
+  },
+  {
+    "id": "purple-knight",
+    "name": "Purple Knight",
+    "aliases": [
+      "Semperis",
+      "AD security posture"
+    ],
+    "category": "DirectoryServices.Assessment",
+    "publisherDownload": "https://www.purple-knight.com/",
+    "description": {
+      "en": "Review directory security posture and remediation guidance. The publisher may require registration to download it.",
+      "es": "Revisa la postura de seguridad del directorio y sus opciones de remediación. El editor puede exigir registro para descargarlo."
+    }
+  },
+  {
+    "id": "driver-store-explorer",
+    "name": "Driver Store Explorer",
+    "aliases": [
+      "RAPR",
+      "driver packages"
+    ],
+    "category": "Endpoint.Hardware",
+    "wingetId": "lostindark.DriverStoreExplorer",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/l/lostindark/DriverStoreExplorer/1.0.75/lostindark.DriverStoreExplorer.yaml",
+    "publisherDownload": "https://github.com/lostindark/DriverStoreExplorer/releases/latest",
+    "description": {
+      "en": "Inventory and export Windows driver packages. Removing drivers requires elevation and changes the system.",
+      "es": "Inventaría y exporta paquetes de controladores de Windows. Eliminar controladores requiere elevación y modifica el sistema."
+    }
+  },
+  {
+    "id": "usb-tree-view",
+    "name": "USB Device Tree Viewer",
+    "aliases": [
+      "UsbTreeView",
+      "USB descriptors"
+    ],
+    "category": "Endpoint.Hardware",
+    "wingetId": "UweSieber.UsbTreeView",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/u/UweSieber/UsbTreeView/4.8.0/UweSieber.UsbTreeView.yaml",
+    "publisherDownload": "https://www.uwe-sieber.de/usbtreeview_e.html",
+    "description": {
+      "en": "Inspect when USB devices, ports and controllers are detected, including descriptors and connection speed.",
+      "es": "Examina dispositivos, puertos y controladores USB detectados, con sus descriptores y velocidad de conexión."
+    }
+  },
+  {
+    "id": "crystal-disk-info",
+    "name": "CrystalDiskInfo",
+    "aliases": [
+      "SMART",
+      "NVMe health"
+    ],
+    "category": "Endpoint.Hardware",
+    "wingetId": "CrystalDewWorld.CrystalDiskInfo",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/c/CrystalDewWorld/CrystalDiskInfo/9.9.5/CrystalDewWorld.CrystalDiskInfo.yaml",
+    "publisherDownload": "https://crystalmark.info/en/software/crystaldiskinfo/",
+    "description": {
+      "en": "Review SMART health and temperature data on supported drives.",
+      "es": "Revisa los datos SMART y la temperatura de unidades compatibles."
+    }
+  },
+  {
+    "id": "crystal-disk-mark",
+    "name": "CrystalDiskMark",
+    "aliases": [
+      "storage benchmark",
+      "disk speed"
+    ],
+    "category": "Endpoint.Hardware",
+    "wingetId": "CrystalDewWorld.CrystalDiskMark",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/c/CrystalDewWorld/CrystalDiskMark/9.0.3/CrystalDewWorld.CrystalDiskMark.yaml",
+    "publisherDownload": "https://crystalmark.info/en/software/crystaldiskmark/",
+    "description": {
+      "en": "Benchmark disk read and write throughput on a selected volume.",
+      "es": "Mide el rendimiento de lectura y escritura en un volumen seleccionado."
+    }
+  },
+  {
+    "id": "smartmontools",
+    "name": "smartmontools",
+    "aliases": [
+      "smartctl",
+      "smartd",
+      "SMART diagnostics"
+    ],
+    "category": "Endpoint.Hardware",
+    "wingetId": "smartmontools.smartmontools",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/s/smartmontools/smartmontools/7.5/smartmontools.smartmontools.yaml",
+    "publisherDownload": "https://github.com/smartmontools/smartmontools/releases/latest",
+    "description": {
+      "en": "Inspect drive health with smartctl and monitor supported devices with smartd. Access to some disks requires elevation.",
+      "es": "Examina el estado de las unidades con smartctl y supervisa dispositivos con smartd. Algunos discos requieren elevación."
+    }
+  },
+  {
+    "id": "hwinfo",
+    "name": "HWiNFO",
+    "aliases": [
+      "hardware inventory",
+      "system sensors"
+    ],
+    "category": "Endpoint.Hardware",
+    "wingetId": "REALiX.HWiNFO",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/r/REALiX/HWiNFO/8.60/REALiX.HWiNFO.yaml",
+    "publisherDownload": "https://www.hwinfo.com/download/",
+    "description": {
+      "en": "Inventory hardware and view sensor readings. Professional usage requires the appropriate license.",
+      "es": "Inventaría hardware y muestra lecturas de sensores. El uso profesional requiere la licencia correspondiente."
+    }
+  },
+  {
+    "id": "libre-hardware-monitor",
+    "name": "Libre Hardware Monitor",
+    "aliases": [
+      "LHM",
+      "system sensors"
+    ],
+    "category": "Endpoint.Hardware",
+    "wingetId": "LibreHardwareMonitor.LibreHardwareMonitor",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/l/LibreHardwareMonitor/LibreHardwareMonitor/0.9.6/LibreHardwareMonitor.LibreHardwareMonitor.yaml",
+    "publisherDownload": "https://github.com/LibreHardwareMonitor/LibreHardwareMonitor/releases/latest",
+    "description": {
+      "en": "Read temperatures, fan speeds and other supported hardware sensor readings.",
+      "es": "Lee temperaturas, velocidades de ventiladores y otras mediciones de sensores compatibles."
+    }
+  },
+  {
+    "id": "latency-mon",
+    "name": "LatencyMon",
+    "aliases": [
+      "DPC latency",
+      "ISR latency"
+    ],
+    "category": "Endpoint.Hardware",
+    "wingetId": "Resplendence.LatencyMon",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/r/Resplendence/LatencyMon/7.40/Resplendence.LatencyMon.yaml",
+    "publisherDownload": "https://www.resplendence.com/latencymon",
+    "description": {
+      "en": "Inspect Windows scheduling and driver latency. Home and professional usage have different license terms.",
+      "es": "Examina latencias de planificación y de controladores de Windows. El uso doméstico y el profesional tienen licencias distintas."
+    }
+  },
+  {
+    "id": "usbdeview",
+    "name": "USBDeview",
+    "aliases": [
+      "NirSoft USB inventory",
+      "USB device history"
+    ],
+    "category": "Endpoint.Hardware",
+    "wingetId": "NirSoft.USBDeview",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/n/NirSoft/USBDeview/3.10/NirSoft.USBDeview.yaml",
+    "publisherDownload": "https://www.nirsoft.net/utils/usb_devices_view.html",
+    "description": {
+      "en": "Review current and previously connected USB devices registered by Windows.",
+      "es": "Revisa dispositivos USB conectados actualmente o registrados con anterioridad en Windows."
+    }
+  },
+  {
+    "id": "usb-drive-log",
+    "name": "USBDriveLog",
+    "aliases": [
+      "USB drive history",
+      "storage connection history"
+    ],
+    "category": "Forensics.WindowsArtifacts",
+    "publisherDownload": "https://www.nirsoft.net/utils/usb_drive_log.html",
+    "description": {
+      "en": "Review historical USB storage connection events recorded by Windows.",
+      "es": "Revisa los eventos históricos de conexión de almacenamiento USB registrados por Windows."
+    }
+  },
+  {
+    "id": "dev-man-view",
+    "name": "DevManView",
+    "aliases": [
+      "NirSoft Device Manager",
+      "device inventory"
+    ],
+    "category": "Endpoint.Hardware",
+    "publisherDownload": "https://www.nirsoft.net/utils/device_manager_view.html",
+    "description": {
+      "en": "Review hardware and device properties registered by Windows.",
+      "es": "Revisa el hardware y las propiedades de dispositivos registradas por Windows."
+    }
+  },
+  {
+    "id": "task-scheduler-view",
+    "name": "TaskSchedulerView",
+    "aliases": [
+      "scheduled tasks",
+      "NirSoft task inventory"
+    ],
+    "category": "Endpoint.Startup",
+    "publisherDownload": "https://www.nirsoft.net/utils/task_scheduler_view.html",
+    "description": {
+      "en": "Inventory scheduled tasks and inspect trigger and execution history.",
+      "es": "Inventaría tareas programadas y examina sus desencadenadores e historial de ejecución."
+    }
+  },
+  {
+    "id": "win-updates-view",
+    "name": "WinUpdatesView",
+    "aliases": [
+      "Windows Update history",
+      "NirSoft updates"
+    ],
+    "category": "Endpoint.Maintenance",
+    "publisherDownload": "https://www.nirsoft.net/utils/windows_updates_history_viewer.html",
+    "description": {
+      "en": "Review Windows Update history and correlate installation dates and results.",
+      "es": "Revisa el historial de Windows Update y correlaciona fechas y resultados de instalación."
+    }
+  },
+  {
+    "id": "win-def-log-view",
+    "name": "WinDefLogView",
+    "aliases": [
+      "Microsoft Defender events",
+      "NirSoft Defender logs"
+    ],
+    "category": "Forensics.Events",
+    "publisherDownload": "https://www.nirsoft.net/utils/windows_defender_log_viewer.html",
+    "description": {
+      "en": "Inspect Microsoft Defender events recorded on a Windows system.",
+      "es": "Examina eventos de Microsoft Defender registrados en un sistema Windows."
+    }
+  },
+  {
+    "id": "network-usage-view",
+    "name": "NetworkUsageView",
+    "aliases": [
+      "Windows SRUM viewer",
+      "NirSoft usage data"
+    ],
+    "category": "Forensics.WindowsArtifacts",
+    "wingetId": "NirSoft.NetworkUsageView",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/n/NirSoft/NetworkUsageView/1.32/NirSoft.NetworkUsageView.yaml",
+    "publisherDownload": "https://www.nirsoft.net/utils/network_usage_view.html",
+    "description": {
+      "en": "View Windows application network usage records from SRUM in a graphical utility.",
+      "es": "Examina registros SRUM de uso de red por aplicaciones mediante una utilidad gráfica."
+    }
+  },
+  {
+    "id": "microsoft-open-ssh",
+    "name": "OpenSSH for Windows",
+    "aliases": [
+      "Windows OpenSSH",
+      "ssh",
+      "sftp",
+      "ssh-keygen",
+      "scp"
+    ],
+    "category": "Crypto.Certificates",
+    "publisherDownload": "https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse",
+    "description": {
+      "en": "Install the Windows OpenSSH optional feature for SSH client or server use. Managing optional features requires elevation.",
+      "es": "Instala la característica opcional OpenSSH de Windows para usar su cliente o servidor. Administrar características opcionales requiere elevación."
+    }
+  },
+  {
+    "id": "putty",
+    "name": "PuTTY",
+    "aliases": [
+      "PuTTYgen",
+      "PSCP",
+      "PSFTP",
+      "Plink"
+    ],
+    "category": "Crypto.Certificates",
+    "wingetId": "PuTTY.PuTTY",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/p/PuTTY/PuTTY/0.85.0.0/PuTTY.PuTTY.yaml",
+    "publisherDownload": "https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html",
+    "description": {
+      "en": "The Windows distribution includes an SSH client, key generator and file-transfer clients.",
+      "es": "La distribución para Windows incluye un cliente SSH, un generador de claves y clientes de transferencia de archivos."
+    }
+  },
+  {
+    "id": "minisign",
+    "name": "minisign",
+    "aliases": [
+      "Ed25519 signatures",
+      "detached signatures"
+    ],
+    "category": "Crypto.Signatures",
+    "wingetId": "jedisct1.minisign",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/j/jedisct1/minisign/0.12/jedisct1.minisign.yaml",
+    "publisherDownload": "https://github.com/jedisct1/minisign/releases/latest",
+    "description": {
+      "en": "Sign files with a detached Ed25519 signature and verify it against a trusted public key.",
+      "es": "Firma archivos mediante una firma Ed25519 separada y la verifica con una clave pública de confianza."
+    }
+  },
+  {
+    "id": "keystore-explorer",
+    "name": "KeyStore Explorer",
+    "aliases": [
+      "KSE",
+      "JKS",
+      "PKCS12"
+    ],
+    "category": "Crypto.Certificates",
+    "wingetId": "KaiKramer.KeyStoreExplorer",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/k/KaiKramer/KeyStoreExplorer/5.7.1/KaiKramer.KeyStoreExplorer.yaml",
+    "publisherDownload": "https://github.com/kaikramer/keystore-explorer/releases/latest",
+    "description": {
+      "en": "Inspect and manage Java keystores, certificate chains and supported key formats.",
+      "es": "Examina y administra almacenes de claves Java, cadenas de certificados y formatos de clave compatibles."
+    }
+  },
+  {
+    "id": "xca",
+    "name": "XCA",
+    "aliases": [
+      "X Certificate and Key management",
+      "X.509"
+    ],
+    "category": "Crypto.Certificates",
+    "wingetId": "ChristianHohnstadt.xca",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/c/ChristianHohnstadt/xca/2.9.0/ChristianHohnstadt.xca.yaml",
+    "publisherDownload": "https://github.com/chris2511/xca/releases/latest",
+    "description": {
+      "en": "Manage X.509 certificates, keys and certificate requests in a local database.",
+      "es": "Administra certificados X.509, claves y solicitudes de certificado en una base de datos local."
+    }
+  },
+  {
+    "id": "mullvad-vpn",
+    "name": "Mullvad VPN",
+    "aliases": [
+      "Mullvad",
+      "VPN client"
+    ],
+    "category": "Privacy.Tunnels",
+    "wingetId": "MullvadVPN.MullvadVPN",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/m/MullvadVPN/MullvadVPN/2026.6/MullvadVPN.MullvadVPN.yaml",
+    "publisherDownload": "https://github.com/mullvad/mullvadvpn-app/releases/latest",
+    "description": {
+      "en": "Connect to the Mullvad VPN service. Requires a paid account.",
+      "es": "Conecta con el servicio Mullvad VPN. Requiere una cuenta de pago."
+    }
+  },
+  {
+    "id": "proton-vpn",
+    "name": "Proton VPN",
+    "aliases": [
+      "Proton",
+      "VPN client"
+    ],
+    "category": "Privacy.Tunnels",
+    "wingetId": "Proton.ProtonVPN",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/p/Proton/ProtonVPN/5.1.10/Proton.ProtonVPN.yaml",
+    "publisherDownload": "https://protonvpn.com/download-windows",
+    "description": {
+      "en": "Connect to Proton VPN. Account and feature availability depend on the selected plan.",
+      "es": "Conecta con Proton VPN. La cuenta y las funciones disponibles dependen del plan elegido."
+    }
+  },
+  {
+    "id": "tailscale",
+    "name": "Tailscale",
+    "aliases": [
+      "tailnet",
+      "WireGuard mesh"
+    ],
+    "category": "Privacy.Tunnels",
+    "wingetId": "Tailscale.Tailscale",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/t/Tailscale/Tailscale/1.104.7/Tailscale.Tailscale.yaml",
+    "publisherDownload": "https://tailscale.com/download/windows",
+    "description": {
+      "en": "Connect devices in a managed WireGuard-based network. Requires a Tailscale account or a compatible coordinator.",
+      "es": "Conecta dispositivos en una red administrada basada en WireGuard. Requiere una cuenta de Tailscale o un coordinador compatible."
+    }
+  },
+  {
+    "id": "zerotier",
+    "name": "ZeroTier One",
+    "aliases": [
+      "ZeroTier",
+      "virtual network"
+    ],
+    "category": "Privacy.Tunnels",
+    "wingetId": "ZeroTier.ZeroTierOne",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/z/ZeroTier/ZeroTierOne/1.16.2/ZeroTier.ZeroTierOne.yaml",
+    "publisherDownload": "https://www.zerotier.com/download/",
+    "description": {
+      "en": "Join a managed virtual network from Windows. Installing the virtual adapter requires elevation.",
+      "es": "Une Windows a una red virtual administrada. Instalar el adaptador virtual requiere elevación."
+    }
+  },
+  {
+    "id": "netbird",
+    "name": "NetBird",
+    "aliases": [
+      "WireGuard overlay",
+      "private mesh"
+    ],
+    "category": "Privacy.Tunnels",
+    "wingetId": "Netbird.Netbird",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/n/Netbird/Netbird/0.84.0/Netbird.Netbird.yaml",
+    "publisherDownload": "https://github.com/netbirdio/netbird/releases/latest",
+    "description": {
+      "en": "Connect to a WireGuard overlay managed by NetBird. Requires a hosted or self-managed control plane.",
+      "es": "Conecta a una red superpuesta WireGuard gestionada por NetBird. Requiere un plano de control alojado o propio."
+    }
+  },
+  {
+    "id": "simplewall",
+    "name": "simplewall",
+    "aliases": [
+      "Windows Filtering Platform",
+      "WFP firewall"
+    ],
+    "category": "Privacy.Filtering",
+    "wingetId": "Henry++.simplewall",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/h/Henry%2B%2B/simplewall/3.8.7/Henry++.simplewall.yaml",
+    "publisherDownload": "https://github.com/henrypp/simplewall/releases/latest",
+    "description": {
+      "en": "Review and manage local traffic filtering rules using Windows Filtering Platform. Rule changes require elevation.",
+      "es": "Revisa y administra filtros de tráfico local con Windows Filtering Platform. Cambiar reglas requiere elevación."
+    }
+  },
+  {
+    "id": "adguard-home",
+    "name": "AdGuard Home",
+    "aliases": [
+      "DNS filtering",
+      "DNS sinkhole"
+    ],
+    "category": "Privacy.Filtering",
+    "wingetId": "AdGuard.AdGuardHome",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/a/AdGuard/AdGuardHome/0.107.80/AdGuard.AdGuardHome.yaml",
+    "publisherDownload": "https://github.com/AdguardTeam/AdGuardHome/releases/latest",
+    "description": {
+      "en": "Run a local DNS service that applies domain filtering policy. WinGet offers 0.107.80. The publisher's download has 1.0.0.",
+      "es": "Ejecuta un servicio DNS local que aplica políticas de filtrado de dominios. WinGet ofrece 0.107.80. La descarga del editor tiene 1.0.0."
+    }
+  },
+  {
+    "id": "virtualbox",
+    "name": "VirtualBox",
+    "aliases": [
+      "Oracle VirtualBox",
+      "VM hypervisor"
+    ],
+    "category": "Labs.VirtualMachines",
+    "wingetId": "Oracle.VirtualBox",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/o/Oracle/VirtualBox/7.2.22/Oracle.VirtualBox.yaml",
+    "publisherDownload": "https://www.virtualbox.org/wiki/Downloads",
+    "description": {
+      "en": "Run isolated guest systems using hardware virtualization. The optional Extension Pack has separate license terms.",
+      "es": "Ejecuta sistemas invitados aislados mediante virtualización por hardware. El Extension Pack opcional tiene una licencia aparte."
+    }
+  },
+  {
+    "id": "vmware-workstation",
+    "name": "VMware Workstation Pro",
+    "aliases": [
+      "Workstation Pro",
+      "VMware desktop hypervisor"
+    ],
+    "category": "Labs.VirtualMachines",
+    "publisherDownload": "https://knowledge.broadcom.com/external/article/368734/download-desktop-hypervisor-workstation.html",
+    "description": {
+      "en": "Run local Windows and Linux guest systems. Downloads may require a Broadcom account and drivers require elevation. Use 26H1u1 or later for the security fixes in VMSA-2026-0007.",
+      "es": "Ejecuta sistemas invitados Windows y Linux. La descarga puede requerir una cuenta de Broadcom y sus controladores requieren elevación. Usa 26H1u1 o posterior para incorporar las correcciones de VMSA-2026-0007."
+    }
+  },
+  {
+    "id": "qemu",
+    "name": "QEMU",
+    "aliases": [
+      "qemu-img",
+      "QEMU emulator"
+    ],
+    "category": "Labs.VirtualMachines",
+    "wingetId": "SoftwareFreedomConservancy.QEMU",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/s/SoftwareFreedomConservancy/QEMU/11.1.0/SoftwareFreedomConservancy.QEMU.yaml",
+    "publisherDownload": "https://www.qemu.org/download/#windows",
+    "description": {
+      "en": "Emulate guest machines and inspect virtual disk formats with qemu-img. Windows installers are linked from the upstream project.",
+      "es": "Emula máquinas invitadas y examina discos virtuales con qemu-img. El proyecto enlaza los instaladores de Windows."
+    }
+  },
+  {
+    "id": "sandboxie-plus",
+    "name": "Sandboxie Plus",
+    "aliases": [
+      "Sandboxie",
+      "application isolation"
+    ],
+    "category": "Labs.VirtualMachines",
+    "wingetId": "Sandboxie.Plus",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/s/Sandboxie/Plus/1.19.1/Sandboxie.Plus.yaml",
+    "publisherDownload": "https://github.com/sandboxie-plus/Sandboxie/releases/latest",
+    "description": {
+      "en": "Run Windows applications with redirected file and Registry access. Driver installation requires elevation and advanced features may require a certificate.",
+      "es": "Ejecuta aplicaciones Windows con acceso redirigido a archivos y Registro. El controlador requiere elevación y algunas funciones avanzadas pueden requerir un certificado."
+    }
+  },
+  {
+    "id": "docker-desktop",
+    "name": "Docker Desktop",
+    "aliases": [
+      "Docker Engine",
+      "Docker CLI",
+      "Docker Compose"
+    ],
+    "category": "Labs.Containers",
+    "wingetId": "Docker.DockerDesktop",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/d/Docker/DockerDesktop/4.100.1/Docker.DockerDesktop.yaml",
+    "publisherDownload": "https://docs.docker.com/desktop/release-notes/",
+    "description": {
+      "en": "Run containers through the supported WSL 2 or Hyper-V backend on eligible Windows editions. Includes Docker Compose. Commercial use may require a subscription. Docker documents image and container visibility issues after the 4.100.1 update.",
+      "es": "Ejecuta contenedores con WSL 2 o Hyper-V en ediciones compatibles de Windows. Incluye Docker Compose. El uso comercial puede exigir suscripción. Docker documenta problemas de visibilidad de imágenes y contenedores tras actualizar a 4.100.1."
+    }
+  },
+  {
+    "id": "podman-desktop",
+    "name": "Podman Desktop",
+    "aliases": [
+      "Podman",
+      "container desktop"
+    ],
+    "category": "Labs.Containers",
+    "wingetId": "RedHat.Podman-Desktop",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/r/RedHat/Podman-Desktop/1.31.0/RedHat.Podman-Desktop.yaml",
+    "publisherDownload": "https://github.com/podman-desktop/podman-desktop/releases/latest",
+    "description": {
+      "en": "Manage images and development containers locally. Linux containers on Windows use a supported Podman machine backend.",
+      "es": "Administra imágenes y contenedores de desarrollo locales. Los contenedores Linux en Windows utilizan un entorno Podman machine compatible."
+    }
+  },
+  {
+    "id": "minikube",
+    "name": "minikube",
+    "aliases": [
+      "minikube Kubernetes",
+      "local Kubernetes"
+    ],
+    "category": "Labs.Containers",
+    "wingetId": "Kubernetes.minikube",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/k/Kubernetes/minikube/1.39.0/Kubernetes.minikube.yaml",
+    "publisherDownload": "https://github.com/kubernetes/minikube/releases/latest",
+    "description": {
+      "en": "Run a local Kubernetes cluster with a supported container or virtual-machine driver.",
+      "es": "Ejecuta un clúster Kubernetes local mediante un controlador compatible de contenedores o máquinas virtuales."
+    }
+  },
+  {
+    "id": "jq",
+    "name": "jq",
+    "aliases": [
+      "JSON query",
+      "JSON filter"
+    ],
+    "category": "Utilities.Data",
+    "wingetId": "jqlang.jq",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/j/jqlang/jq/1.8.2/jqlang.jq.yaml",
+    "publisherDownload": "https://github.com/jqlang/jq/releases/latest",
+    "description": {
+      "en": "Filter and transform JSON from command-line diagnostics and security exports.",
+      "es": "Filtra y transforma JSON de diagnósticos y exportaciones de seguridad desde la línea de comandos."
+    }
+  },
+  {
+    "id": "yq",
+    "name": "yq",
+    "aliases": [
+      "YAML query",
+      "YAML filter"
+    ],
+    "category": "Utilities.Data",
+    "wingetId": "MikeFarah.yq",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/m/MikeFarah/yq/4.54.3/MikeFarah.yq.yaml",
+    "publisherDownload": "https://github.com/mikefarah/yq/releases/latest",
+    "description": {
+      "en": "Query and transform YAML configuration and structured exports.",
+      "es": "Consulta y transforma configuraciones YAML y exportaciones estructuradas."
+    }
+  },
+  {
+    "id": "ripgrep",
+    "name": "ripgrep",
+    "aliases": [
+      "rg",
+      "regex search"
+    ],
+    "category": "Endpoint.FileSearch",
+    "wingetId": "BurntSushi.ripgrep.MSVC",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/b/BurntSushi/ripgrep/MSVC/16.0.0/BurntSushi.ripgrep.MSVC.yaml",
+    "publisherDownload": "https://github.com/BurntSushi/ripgrep/releases/latest",
+    "description": {
+      "en": "Search source and text evidence using regular expressions and file filters.",
+      "es": "Busca en código y evidencias de texto mediante expresiones regulares y filtros de archivo."
+    }
+  },
+  {
+    "id": "fd",
+    "name": "fd",
+    "aliases": [
+      "fd-find",
+      "filename search"
+    ],
+    "category": "Endpoint.FileSearch",
+    "wingetId": "sharkdp.fd",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/s/sharkdp/fd/10.5.0/sharkdp.fd.yaml",
+    "publisherDownload": "https://github.com/sharkdp/fd/releases/latest",
+    "description": {
+      "en": "Find files and directories by pattern from the terminal. WinGet offers 10.5.0. The publisher's download has 10.5.2.",
+      "es": "Busca archivos y directorios por patrón desde la terminal. WinGet ofrece 10.5.0. La descarga del editor tiene 10.5.2."
+    }
+  },
+  {
+    "id": "seven-zip",
+    "name": "7-Zip",
+    "aliases": [
+      "7z",
+      "7-Zip File Manager"
+    ],
+    "category": "Utilities.Archives",
+    "wingetId": "7zip.7zip",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/7/7zip/7zip/26.06/7zip.7zip.yaml",
+    "publisherDownload": "https://www.7-zip.org/download.html",
+    "description": {
+      "en": "Inspect and extract common archive formats. Includes the 7z command line and graphical file manager.",
+      "es": "Examina y extrae formatos de archivo comprimido habituales. Incluye la utilidad 7z y el gestor gráfico."
+    }
+  },
+  {
+    "id": "powershell",
+    "name": "PowerShell",
+    "aliases": [
+      "pwsh",
+      "PowerShell 7"
+    ],
+    "category": "Utilities.Terminal",
+    "wingetId": "Microsoft.PowerShell",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/m/Microsoft/PowerShell/7.7.0.0/Microsoft.PowerShell.yaml",
+    "publisherDownload": "https://github.com/PowerShell/PowerShell/releases/latest",
+    "description": {
+      "en": "Run PowerShell 7 alongside Windows PowerShell for administrative scripts and structured automation.",
+      "es": "Ejecuta PowerShell 7 junto a Windows PowerShell para scripts administrativos y automatización estructurada."
+    }
+  },
+  {
+    "id": "windows-terminal",
+    "name": "Windows Terminal",
+    "aliases": [
+      "wt",
+      "Windows console"
+    ],
+    "category": "Utilities.Terminal",
+    "wingetId": "Microsoft.WindowsTerminal",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/m/Microsoft/WindowsTerminal/1.25.3131.0/Microsoft.WindowsTerminal.yaml",
+    "publisherDownload": "https://github.com/microsoft/terminal/releases/latest",
+    "description": {
+      "en": "Host PowerShell and other command-line shells in a tabbed Windows terminal. Requires a supported Windows 10 or 11 build.",
+      "es": "Ejecuta PowerShell y otros intérpretes en una terminal de Windows con pestañas. Requiere una compilación compatible de Windows 10 u 11."
+    }
+  },
+  {
+    "id": "git",
+    "name": "Git for Windows",
+    "aliases": [
+      "Git Bash",
+      "Git GUI"
+    ],
+    "category": "Utilities.Terminal",
+    "wingetId": "Git.Git",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/g/Git/Git/2.56.1/Git.Git.yaml",
+    "publisherDownload": "https://github.com/git-for-windows/git/releases/latest",
+    "description": {
+      "en": "Review versioned source and configuration changes. The Windows distribution includes Git Bash and Git GUI.",
+      "es": "Revisa cambios de código y configuración bajo control de versiones. La distribución Windows incluye Git Bash y Git GUI."
+    }
+  },
+  {
+    "id": "bat",
+    "name": "bat",
+    "aliases": [
+      "syntax highlighted pager",
+      "cat alternative"
+    ],
+    "category": "Utilities.Terminal",
+    "wingetId": "sharkdp.bat",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/s/sharkdp/bat/0.26.1/sharkdp.bat.yaml",
+    "publisherDownload": "https://github.com/sharkdp/bat/releases/latest",
+    "description": {
+      "en": "Read source and diagnostic text with syntax highlighting and line numbers.",
+      "es": "Lee código y texto de diagnóstico con resaltado de sintaxis y números de línea."
+    }
+  },
+  {
+    "id": "hyperfine",
+    "name": "hyperfine",
+    "aliases": [
+      "CLI benchmark",
+      "command timing"
+    ],
+    "category": "Utilities.Terminal",
+    "wingetId": "sharkdp.hyperfine",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/s/sharkdp/hyperfine/2.0.0/sharkdp.hyperfine.yaml",
+    "publisherDownload": "https://github.com/sharkdp/hyperfine/releases/latest",
+    "description": {
+      "en": "Measure and compare execution time for local commands.",
+      "es": "Mide y compara tiempos de ejecución de comandos locales."
+    }
+  },
+  {
+    "id": "dust",
+    "name": "dust",
+    "aliases": [
+      "du alternative",
+      "disk usage"
+    ],
+    "category": "Endpoint.FileSearch",
+    "wingetId": "bootandy.dust",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/b/bootandy/dust/1.2.8/bootandy.dust.yaml",
+    "publisherDownload": "https://github.com/bootandy/dust/releases/latest",
+    "description": {
+      "en": "Summarize disk usage by directory to locate large collections of files.",
+      "es": "Resume el uso de disco por carpeta para localizar conjuntos de archivos voluminosos."
+    }
+  },
+  {
+    "id": "csv-file-view",
+    "name": "CSVFileView",
+    "aliases": [
+      "CSV viewer",
+      "TSV viewer",
+      "NirSoft CSV"
+    ],
+    "category": "Utilities.Data",
+    "wingetId": "NirSoft.CSVFileView",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/n/NirSoft/CSVFileView/2.66/NirSoft.CSVFileView.yaml",
+    "publisherDownload": "https://www.nirsoft.net/utils/csv_file_view.html",
+    "description": {
+      "en": "Review, sort and export tabular evidence in CSV and tab-delimited files.",
+      "es": "Revisa, ordena y exporta evidencias tabulares de archivos CSV o delimitados por tabulaciones."
     }
   }
 ]

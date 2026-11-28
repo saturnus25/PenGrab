@@ -28,7 +28,7 @@ Guidance for work in the PenGrab repository.
 ## Portability and distribution
 
 - Resolve the catalog, translations and portable preferences relative to the app folder. The launcher must work from a different current directory. A portable bundle uses `config/portable` to keep preferences beside the app.
-- Interactive installation asks for a destination when neither `-InstallPath` nor `-ChoosePath` is supplied. Enter accepts the default. Show the resolved destination at confirmation and keep automated confirmations and update handoffs prompt-free.
+- Interactive installation opens a setup window with the suggested destination and Browse, Install and Cancel buttons. `-ChoosePath` opens the folder picker immediately. Keep the console fallback for hosts where the window cannot open. Keep automated requests and update handoffs prompt-free.
 - Build the portable ZIP with `Package-Portable.ps1` and signed distribution with `Package-Release.ps1`. Ship the MIT license and third-party notices in the ZIP. Update the notices when shipped dependencies change. The executable embeds the unlettered icon. The outlined PNGs in `assets/` are GitHub branding.
 - Keep [the automation contract](docs/NonInteractive.md) synchronized with the installer and CLI, including JSON outcomes and exit codes. Unattended package requests use explicit IDs and user-scope portable WinGet installers. App-only installation accepts an empty selection. `-NonInteractive` skips prompts, UAC and TUI launch. Dry runs validate the plan without applying package changes.
 - Release scripts support invocation as files and script blocks in both PowerShell versions. Temporary `Run` verifies and extracts the bundle, uses `config/temporary` to skip self-update and deletes its owned staging directory at exit. Verify cleanup with a trailing separator in the temporary parent path.
@@ -57,7 +57,7 @@ cargo build --release --locked
 | --- | --- |
 | Interface | Launch `PenGrab.bat`. Check keyboard and mouse input, English and Spanish, monochrome, wide and compact views including 32×16, and live resize with focus and hit areas intact. |
 | Catalog and diagnostics | Check reload and selection, aliases and misspellings, and loading, empty, update and failure states. Use labeled mocks for package actions and read-only queries for real inventory. |
-| Installer and bootstrap | Test PowerShell 5.1 and 7. Cover typed, default and explicit paths, cancellation and unattended installation. Check that the bootstrap returns control and cleans up. |
+| Installer and bootstrap | Test PowerShell 5.1 and 7. Cover the default, folder picker and explicit paths, cancellation and unattended installation. Check that the bootstrap returns control and cleans up. |
 | Package and release | Inspect the ZIP and open the extracted app from a moved folder with spaces and a different working directory. Check persisted preferences. After publication, test anonymous asset downloads, the exact README `irm` commands and an `F8` update from the previous release with cancellation, preferences and backup checks. |
 
 Record the version, shells, backend and environment actually tested. Distinguish local signed-bundle tests, public GitHub tests and real Windows Terminal mouse checks.

@@ -4,7 +4,7 @@
 
 # PenGrab
 
-**Un catálogo portátil de herramientas de seguridad y diagnóstico para la terminal de Windows.** Explora por categorías, comprueba qué detecta WinGet y revisa las instalaciones y actualizaciones seleccionadas.
+**Un catálogo portátil de 283 herramientas de seguridad y diagnóstico para la terminal de Windows.** Explora por categorías, comprueba qué detecta WinGet y revisa las instalaciones y actualizaciones seleccionadas.
 
 [Descargar](https://github.com/saturnus25/PenGrab/releases/latest) · [Inicio rápido](#inicio-rápido) · [Controles](#controles) · [Automatización](docs/NonInteractive.md) · [Incidencias](https://github.com/saturnus25/PenGrab/issues) · [English](README.md)
 
@@ -33,7 +33,7 @@ Ejecuta este comando en **Windows PowerShell 5.1** o **PowerShell 7** para insta
 & ([ScriptBlock]::Create((irm -UseBasicParsing 'https://github.com/saturnus25/PenGrab/releases/latest/download/install.ps1')))
 ~~~
 
-Cuando el instalador pregunte por la carpeta, escribe una ruta absoluta o pulsa **Enter** para usar `%LOCALAPPDATA%\Programs\PenGrab`. El instalador admite `-InstallPath` para indicar una ruta absoluta o `-ChoosePath` para elegirla en el selector de carpetas.
+La ventana de instalación muestra la carpeta recomendada, `%LOCALAPPDATA%\Programs\PenGrab`. Pulsa **Install** para usarla o **Browse** para elegir o crear otra carpeta. **Cancel** cierra el instalador. Usa `-InstallPath` para indicar una ruta absoluta o `-ChoosePath` para abrir directamente el selector de carpetas.
 
 ### 🪄 Abrir una sesión temporal
 

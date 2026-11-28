@@ -46,21 +46,97 @@ function Resolve-AbsolutePath {
 }
 
 function Select-InstallPath {
+    param([string] $DefaultPath, [switch] $BrowseFirst)
     $chooser = @'
+$ErrorActionPreference = 'Stop'
+if (-not [Environment]::UserInteractive) { exit 1 }
 Add-Type -AssemblyName System.Windows.Forms
-$dialog = New-Object Windows.Forms.FolderBrowserDialog
+[Windows.Forms.Application]::EnableVisualStyles()
+
+$form = New-Object Windows.Forms.Form -Property @{
+    Text = 'Install PenGrab'
+    ClientSize = [Drawing.Size]::new(560, 148)
+    AutoScaleMode = 'Dpi'
+    AutoScaleDimensions = [Drawing.SizeF]::new(96, 96)
+    StartPosition = 'CenterScreen'
+    FormBorderStyle = 'FixedDialog'
+    MaximizeBox = $false
+    MinimizeBox = $false
+    ShowIcon = $false
+}
+$label = New-Object Windows.Forms.Label -Property @{
+    Text = 'Choose where to install PenGrab.'
+    Location = [Drawing.Point]::new(18, 18)
+    AutoSize = $true
+}
+$folder = New-Object Windows.Forms.TextBox -Property @{
+    AccessibleName = 'Installation folder'
+    Text = [Text.Encoding]::UTF8.GetString([Convert]::FromBase64String('@@DEFAULT_PATH@@'))
+    Location = [Drawing.Point]::new(18, 50)
+    Size = [Drawing.Size]::new(418, 24)
+    ReadOnly = $true
+    TabIndex = 0
+}
+$browse = New-Object Windows.Forms.Button -Property @{
+    Text = '&Browse...'
+    Location = [Drawing.Point]::new(446, 47)
+    Size = [Drawing.Size]::new(96, 28)
+    TabIndex = 1
+}
+$install = New-Object Windows.Forms.Button -Property @{
+    Text = '&Install'
+    Location = [Drawing.Point]::new(344, 105)
+    Size = [Drawing.Size]::new(96, 28)
+    DialogResult = 'OK'
+    TabIndex = 2
+}
+$cancel = New-Object Windows.Forms.Button -Property @{
+    Text = 'Cancel'
+    Location = [Drawing.Point]::new(446, 105)
+    Size = [Drawing.Size]::new(96, 28)
+    DialogResult = 'Cancel'
+    TabIndex = 3
+}
+$form.Controls.AddRange(@($label, $folder, $browse, $install, $cancel))
+$form.AcceptButton = $install
+$form.CancelButton = $cancel
+$browse.Add_Click({
+    $picker = New-Object Windows.Forms.FolderBrowserDialog
+    try {
+        $picker.Description = 'Choose or create the folder for PenGrab.'
+        $start = $folder.Text
+        while ($start -and -not [IO.Directory]::Exists($start)) {
+            $start = [IO.Path]::GetDirectoryName($start)
+        }
+        if ($start) { $picker.SelectedPath = $start }
+        if ($picker.ShowDialog($form) -eq [Windows.Forms.DialogResult]::OK) {
+            $folder.Text = $picker.SelectedPath
+        }
+    } finally { $picker.Dispose() }
+})
+$form.Add_Shown({
+    $form.Activate()
+    if (@@BROWSE_FIRST@@) { $browse.PerformClick() }
+})
 try {
-    $dialog.Description = 'Choose the PenGrab installation folder.'
-    if ($dialog.ShowDialog() -eq [Windows.Forms.DialogResult]::OK) {
-        $dialog.SelectedPath
-    } else { exit 7 }
-} finally { $dialog.Dispose() }
+    if ($form.ShowDialog() -ne [Windows.Forms.DialogResult]::OK) { exit 7 }
+    [Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes($folder.Text))
+} finally { $form.Dispose() }
 '@
+    $defaultBytes = [Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes($DefaultPath))
+    $chooser = $chooser.Replace('@@DEFAULT_PATH@@', $defaultBytes).Replace('@@BROWSE_FIRST@@', [string][int][bool]$BrowseFirst)
     $encoded = [Convert]::ToBase64String([Text.Encoding]::Unicode.GetBytes($chooser))
     $shell = Join-Path $env:SystemRoot 'System32\WindowsPowerShell\v1.0\powershell.exe'
-    $chosen = & $shell -NoProfile -Sta -EncodedCommand $encoded
-    if ($LASTEXITCODE -ne 0 -or -not $chosen) { Stop-PenGrab 7 'Folder selection cancelled.' }
-    return $chosen
+    $dialogExit = 1
+    try {
+        $chosen = & $shell -NoLogo -NoProfile -NonInteractive -Sta -EncodedCommand $encoded 2>$null
+        $dialogExit = $LASTEXITCODE
+    } catch {}
+    if ($dialogExit -eq 7) { Stop-PenGrab 7 'Installation cancelled.' }
+    if ($dialogExit -eq 0 -and $chosen) {
+        return [Text.Encoding]::UTF8.GetString([Convert]::FromBase64String($chosen))
+    }
+    Write-Warning 'The installation window could not open. Choose a folder in this terminal.'
 }
 
 function Remove-OwnDirectory {
@@ -313,17 +389,22 @@ try {
     if ($ToolInstallPath -and -not $selection) { Stop-PenGrab 2 'ToolInstallPath requires a package selection.' }
     if ($Mode -eq 'Check' -and $selection) { Stop-PenGrab 2 'Check cannot execute a package selection.' }
     if ($Mode -eq 'Run' -and $InstallPath) { Stop-PenGrab 2 'Run stages PenGrab in a temporary directory.' }
-    if ($ChoosePath) {
-        if ($Mode -ne 'Install' -or $NonInteractive -or $DryRun -or $InstallPath) {
-            Stop-PenGrab 2 'ChoosePath requires interactive Install without InstallPath or DryRun.'
-        }
-        $InstallPath = Select-InstallPath
+    $interactiveInstall = $Mode -eq 'Install' -and -not ($NonInteractive -or $DryRun -or $Confirmed)
+    $destinationConfirmed = $false
+    if ($ChoosePath -and (-not $interactiveInstall -or $InstallPath)) {
+        Stop-PenGrab 2 'ChoosePath requires interactive Install without InstallPath, DryRun or Confirmed.'
     }
     if (-not $InstallPath) {
         $InstallPath = Join-Path $env:LOCALAPPDATA 'Programs\PenGrab'
-        if ($Mode -eq 'Install' -and -not ($NonInteractive -or $DryRun -or $Confirmed)) {
-            $enteredPath = (Read-Host "Install folder (absolute path, Enter for $InstallPath)").Trim()
-            if ($enteredPath) { $InstallPath = $enteredPath.Trim('"') }
+        if ($interactiveInstall) {
+            $chosen = Select-InstallPath -DefaultPath $InstallPath -BrowseFirst:$ChoosePath
+            if ($chosen) {
+                $InstallPath = $chosen
+                $destinationConfirmed = $true
+            } else {
+                $enteredPath = (Read-Host "Install folder (absolute path, Enter for $InstallPath)").Trim()
+                if ($enteredPath) { $InstallPath = $enteredPath.Trim('"') }
+            }
         }
     }
     $InstallPath = Resolve-AbsolutePath $InstallPath 'InstallPath'
@@ -363,7 +444,7 @@ try {
             $archiveBytes = Read-VerifiedArchive $release $work
             $bundle = $null
             $script:resultCode = 5
-            if (-not $DryRun -and -not $NonInteractive -and -not $Confirmed -and $Mode -ne 'Run') {
+            if (-not ($DryRun -or $NonInteractive -or $Confirmed -or $destinationConfirmed) -and $Mode -ne 'Run') {
                 if ((Read-Host "Install PenGrab $($release.version) in $InstallPath? [y/N]") -notmatch '^(y|yes|s|si)$') {
                     Stop-PenGrab 7 'Cancelled.'
                 }

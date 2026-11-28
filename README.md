@@ -4,7 +4,7 @@
 
 # PenGrab
 
-**A portable Windows terminal catalog for security and diagnostics tools.** Browse by category, check what WinGet detects, and review selected installs and updates from one screen.
+**A portable Windows terminal catalog of 283 security and diagnostics tools.** Browse by category, check what WinGet detects, and review selected installs and updates from one screen.
 
 [![Latest release](https://img.shields.io/github/v/release/saturnus25/PenGrab?style=for-the-badge&logo=github&label=Latest%20release&color=c24e57)](https://github.com/saturnus25/PenGrab/releases/latest)
 [![Windows x64](https://img.shields.io/badge/Portable-Windows%20x64-0078d4?style=for-the-badge)](#quick-start)
@@ -38,7 +38,7 @@ Run this command in **Windows PowerShell 5.1** or **PowerShell 7** to install Pe
 & ([ScriptBlock]::Create((irm -UseBasicParsing 'https://github.com/saturnus25/PenGrab/releases/latest/download/install.ps1')))
 ~~~
 
-When the installer asks for the folder, enter an absolute path or press **Enter** to use `%LOCALAPPDATA%\Programs\PenGrab`. The installer also accepts `-InstallPath` for an absolute destination or `-ChoosePath` for a folder picker.
+The installation window shows the suggested folder, `%LOCALAPPDATA%\Programs\PenGrab`. Click **Install** to use it or **Browse** to choose or create another folder. **Cancel** closes setup. Pass `-InstallPath` to specify an absolute path or `-ChoosePath` to open the folder picker immediately.
 
 ### 🪄 Run a temporary session
 

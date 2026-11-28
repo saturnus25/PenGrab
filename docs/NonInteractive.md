@@ -17,8 +17,8 @@ Use Windows PowerShell 5.1 or PowerShell 7 on Windows x64. Pass explicit catalog
 | Parameter | Values and behavior |
 | --- | --- |
 | `-Mode` | `Install` copies the signed Windows bundle to an app directory. `Update` replaces an existing copy if the signed version is newer. `Check` reads signed version metadata. `Run` uses a temporary app directory. `Packages` applies a selection to an existing PenGrab directory. |
-| `-InstallPath` | Absolute Windows path to the PenGrab directory. An interactive install prompts for a folder if this is omitted. Enter accepts `%LOCALAPPDATA%\Programs\PenGrab`, which is also the unattended default. Omit this for `Run`. |
-| `-ChoosePath` | Opens the native folder picker in interactive install mode. Omit this in unattended requests. |
+| `-InstallPath` | Absolute Windows path to the PenGrab directory. If omitted, the interactive setup window offers `%LOCALAPPDATA%\Programs\PenGrab` and a Browse button. Unattended installs use the same default. Omit this for `Run`. |
+| `-ChoosePath` | Opens the native folder picker as the interactive setup window appears. Omit this in unattended requests or when passing `-InstallPath`. |
 | `-ReleaseDirectory` | Absolute path to a local directory containing the signed manifest, signature and archive. Without this parameter the installer uses the official release channel. |
 | `-Version` | Exact version `major.minor.patch` without `v`. Defaults to the latest signed release. |
 | `-PublicKeyPath` | Absolute path to an independently trusted RSA public key for the repository script. The release scripts carry the embedded public key. |

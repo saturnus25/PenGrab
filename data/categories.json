@@ -261,6 +261,34 @@
           "en": "File triage",
           "es": "Triaje de archivos"
         }
+      },
+      {
+        "id": "Forensics.WindowsArtifacts",
+        "name": {
+          "en": "Windows artifacts",
+          "es": "Artefactos de Windows"
+        }
+      },
+      {
+        "id": "Forensics.Registry",
+        "name": {
+          "en": "Windows Registry",
+          "es": "Registro de Windows"
+        }
+      },
+      {
+        "id": "Forensics.Recovery",
+        "name": {
+          "en": "File recovery",
+          "es": "Recuperación de archivos"
+        }
+      },
+      {
+        "id": "Forensics.Backup",
+        "name": {
+          "en": "Backup & sync",
+          "es": "Copias de seguridad y sincronización"
+        }
       }
     ]
   },
@@ -330,6 +358,13 @@
         "name": {
           "en": "File search",
           "es": "Búsqueda de archivos"
+        }
+      },
+      {
+        "id": "Endpoint.Hardware",
+        "name": {
+          "en": "Hardware & drivers",
+          "es": "Hardware y controladores"
         }
       }
     ]
@@ -513,6 +548,13 @@
           "en": "Certificates & PKI",
           "es": "Certificados y PKI"
         }
+      },
+      {
+        "id": "Crypto.Signatures",
+        "name": {
+          "en": "Digital signatures",
+          "es": "Firmas digitales"
+        }
       }
     ]
   },
@@ -569,6 +611,13 @@
           "en": "VPN & tunnels",
           "es": "VPN y túneles"
         }
+      },
+      {
+        "id": "Privacy.Filtering",
+        "name": {
+          "en": "Traffic filtering",
+          "es": "Filtrado de tráfico"
+        }
       }
     ]
   },
@@ -589,6 +638,69 @@
         "name": {
           "en": "Directory security",
           "es": "Seguridad de directorios"
+        }
+      }
+    ]
+  },
+  {
+    "id": "Labs",
+    "name": {
+      "en": "Virtualization & labs",
+      "es": "Virtualización y laboratorios"
+    },
+    "symbol": "#",
+    "icon": {
+      "glyph": "◈",
+      "accent": "blue"
+    },
+    "children": [
+      {
+        "id": "Labs.VirtualMachines",
+        "name": {
+          "en": "Virtual machines",
+          "es": "Máquinas virtuales"
+        }
+      },
+      {
+        "id": "Labs.Containers",
+        "name": {
+          "en": "Containers",
+          "es": "Contenedores"
+        }
+      }
+    ]
+  },
+  {
+    "id": "Utilities",
+    "name": {
+      "en": "Utilities",
+      "es": "Utilidades"
+    },
+    "symbol": "*",
+    "icon": {
+      "glyph": "✦",
+      "accent": "gold"
+    },
+    "children": [
+      {
+        "id": "Utilities.Terminal",
+        "name": {
+          "en": "Terminal & automation",
+          "es": "Terminal y automatización"
+        }
+      },
+      {
+        "id": "Utilities.Data",
+        "name": {
+          "en": "Structured data",
+          "es": "Datos estructurados"
+        }
+      },
+      {
+        "id": "Utilities.Archives",
+        "name": {
+          "en": "Archives",
+          "es": "Archivos comprimidos"
         }
       }
     ]
