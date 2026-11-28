@@ -324,6 +324,13 @@
           "en": "System maintenance",
           "es": "Mantenimiento del sistema"
         }
+      },
+      {
+        "id": "Endpoint.FileSearch",
+        "name": {
+          "en": "File search",
+          "es": "Búsqueda de archivos"
+        }
       }
     ]
   },

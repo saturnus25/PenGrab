@@ -134,6 +134,30 @@ fn shipped_catalog_offers_both_nmap_sources_in_one_tool() {
 }
 
 #[test]
+fn shipped_catalog_finds_everything_by_publisher_and_category() {
+    let data = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("data");
+    let catalog = Catalog::load(&data).unwrap();
+    let category = catalog.category_index("Endpoint.FileSearch").unwrap();
+    let results = search::find(&catalog, Language::Es, "voidtools");
+    let Target::Tool(index) = results[0].target else {
+        panic!("expected Everything as the first search result");
+    };
+    let tool = &catalog.tools[index];
+
+    assert_eq!(tool.id, "everything");
+    assert!(catalog.branch(Some(category)).contains(&index));
+    assert_eq!(tool.winget_id.as_deref(), Some("voidtools.Everything"));
+    assert_eq!(
+        tool.publisher_url(),
+        Some("https://www.voidtools.com/downloads/")
+    );
+    assert_eq!(
+        search::find(&catalog, Language::Es, "busqueda de archivos")[0].target,
+        Target::Category(category)
+    );
+}
+
+#[test]
 fn catalog_filters_invalid_download_urls_and_copy_commands() {
     let tool = r#"[{"id":"tool","name":"Tool","category":"Web.Http","description":{"en":"Tool"},"wingetId":"Example.Tool & extra","publisherDownload":"https://example.org/download"}]"#;
     let catalog = Catalog::from_json(CATEGORIES, tool).unwrap();

@@ -58,6 +58,8 @@ Both scripts verify the manifest signature and the ZIP's size and SHA-256. Revie
 | **📋 Review package changes** | **🎛️ Adapt the interface** |
 | Select individual tools or an entire branch. Review install and update queues before applying them. Open a publisher link from Details when available. | Use keyboard or mouse, switch between English and Spanish, and compare settings before applying them. Panels adapt as you resize the terminal. |
 
+Find **Everything** under **Windows endpoint → File search** or search for `voidtools`. Its details include the WinGet package ID and the publisher's download page.
+
 ### Controls
 
 | Action | Shortcut |

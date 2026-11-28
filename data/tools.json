@@ -1670,6 +1670,22 @@
     }
   },
   {
+    "id": "everything",
+    "name": "Everything",
+    "aliases": [
+      "voidtools",
+      "Everything Search"
+    ],
+    "category": "Endpoint.FileSearch",
+    "wingetId": "voidtools.Everything",
+    "manifest": "https://github.com/microsoft/winget-pkgs/blob/master/manifests/v/voidtools/Everything/1.4.1.1032/voidtools.Everything.yaml",
+    "publisherDownload": "https://www.voidtools.com/downloads/",
+    "description": {
+      "en": "Find files and folders by name in Windows with a local search index.",
+      "es": "Encuentra archivos y carpetas por nombre en Windows con un índice de búsqueda local."
+    }
+  },
+  {
     "id": "ttd",
     "name": "Time Travel Debugging",
     "aliases": [

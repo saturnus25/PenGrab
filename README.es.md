@@ -59,6 +59,8 @@ Los dos scripts comprueban la firma del manifiesto, el tamaño y el SHA-256 del 
 
 El control **Todas las herramientas** permanece encima del árbol. Una rama marcada incluye también sus descendientes ocultos por un filtro. En pantalla compacta, **Enter** abre los detalles de la herramienta.
 
+Encuentra **Everything** en **Sistema Windows → Búsqueda de archivos** o busca `voidtools`. En sus detalles aparecen el ID de WinGet y la página de descarga del proveedor.
+
 **Configuración** permite comparar el valor actual con la alternativa para idioma, tema, ratón, movimiento reducido, árbol de categorías y estados de paquetes. Usa **Enter** o haz clic en el valor para aplicar el cambio. **Diagnóstico** comprueba en paralelo el inventario y las actualizaciones que WinGet puede identificar.
 
 ## 🤖 Automatización y compilación
